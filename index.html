@@ -1536,6 +1536,67 @@
 
         .faq-answer p:last-child { margin-bottom: 0; }
 
+        /* ── Frameworks Strip ───────────────────────────────── */
+        .frameworks-strip {
+            background-color: var(--white);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+            padding: 2.5rem 2rem;
+        }
+
+        .frameworks-strip .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .frameworks-label {
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-bottom: 1.75rem;
+        }
+
+        .frameworks-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem 2rem;
+        }
+
+        .framework-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--light-bg);
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            padding: 0.6rem 1.1rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--navy);
+            white-space: nowrap;
+        }
+
+        .framework-badge .badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .frameworks-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 1.25rem;
+            font-style: italic;
+        }
+
         /* ── Responsive additions ────────────────────────────── */
         @media (max-width: 768px) {
             #resources, #case-study, #sector-briefs, #faq {
@@ -1809,6 +1870,25 @@
                 </div>
             </div>
         </section>
+
+        <!-- ─── FRAMEWORKS STRIP ─────────────────────────────────── -->
+        <div class="frameworks-strip">
+            <div class="container">
+                <p class="frameworks-label">Procurement Frameworks &amp; Funding Environments We Navigate</p>
+                <div class="frameworks-row">
+                    <span class="framework-badge"><span class="badge-dot"></span>African Development Bank (AfDB)</span>
+                    <span class="framework-badge"><span class="badge-dot"></span>World Bank / IFC</span>
+                    <span class="framework-badge"><span class="badge-dot"></span>Islamic Development Bank (IsDB)</span>
+                    <span class="framework-badge"><span class="badge-dot"></span>REIPPP — South Africa</span>
+                    <span class="framework-badge"><span class="badge-dot"></span>GET FiT — East Africa</span>
+                    <span class="framework-badge"><span class="badge-dot"></span>KFAED — Gulf-backed Projects</span>
+                    <span class="framework-badge"><span class="badge-dot"></span>Abu Dhabi Fund for Development</span>
+                    <span class="framework-badge"><span class="badge-dot"></span>IFC Performance Standards</span>
+                    <span class="framework-badge"><span class="badge-dot"></span>AfDB Integrated Safeguards</span>
+                </div>
+                <p class="frameworks-note">BidReady Advisory is not affiliated with or endorsed by any of the above organisations. These are the procurement and funding frameworks within which our clients operate.</p>
+            </div>
+        </div>
 
         <!-- ─── ABOUT ─────────────────────────────────────────── -->
         <section id="about">
