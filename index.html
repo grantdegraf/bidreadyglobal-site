@@ -1179,6 +1179,376 @@
             .btn { padding: 0.875rem 1.5rem; font-size: 0.95rem; }
         }
 
+        /* ── Resources Section ───────────────────────────────── */
+        #resources {
+            background-color: var(--light-bg);
+            max-width: none;
+            padding: 7rem 2rem;
+        }
+
+        #resources .container h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        #resources .section-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .resource-card {
+            background: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 8px 24px rgba(201, 168, 76, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .resource-type {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+
+        .resource-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .resource-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--navy);
+            color: var(--white) !important;
+            padding: 0.75rem 1.25rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            align-self: flex-start;
+        }
+
+        .btn-download:hover {
+            background-color: var(--gold);
+            color: var(--navy) !important;
+        }
+
+        /* ── Case Study ──────────────────────────────────────── */
+        #case-study {
+            background-color: var(--white);
+            padding: 7rem 2rem;
+        }
+
+        .case-study-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .case-study-inner h2 {
+            margin-bottom: 0.75rem;
+        }
+
+        .case-study-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .case-meta-item {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .case-meta-item strong {
+            color: var(--navy);
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.2rem;
+        }
+
+        .case-body p {
+            font-size: 1rem;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .case-finding-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+
+        .case-finding {
+            background: var(--light-bg);
+            border-left: 3px solid var(--gold);
+            padding: 1.25rem;
+            border-radius: 4px;
+        }
+
+        .case-finding .finding-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 0.4rem;
+        }
+
+        .case-finding p {
+            font-size: 0.875rem;
+            color: var(--navy);
+            line-height: 1.55;
+            margin-bottom: 0;
+        }
+
+        .case-outcome {
+            background: var(--navy);
+            color: var(--white);
+            border-radius: 8px;
+            padding: 2rem 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .case-outcome h4 {
+            color: var(--gold);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.75rem;
+        }
+
+        .case-outcome p {
+            color: rgba(255,255,255,0.88);
+            font-size: 1rem;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        /* ── Sector Briefs ───────────────────────────────────── */
+        #sector-briefs {
+            background-color: var(--light-bg);
+            max-width: none;
+            padding: 7rem 2rem;
+        }
+
+        #sector-briefs .container h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        #sector-briefs .section-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem;
+            color: var(--text-secondary);
+        }
+
+        .briefs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 3rem;
+        }
+
+        .brief-card {
+            background: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+        }
+
+        .brief-header {
+            background: var(--navy);
+            padding: 1.75rem 2rem;
+        }
+
+        .brief-header .brief-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .brief-header h3 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        .brief-body {
+            padding: 2rem;
+        }
+
+        .brief-body p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .brief-list {
+            list-style: none;
+            border-top: 1px solid var(--border-light);
+            padding-top: 1.25rem;
+            margin-top: 0.5rem;
+        }
+
+        .brief-list li {
+            padding: 0.45rem 0 0.45rem 1.5rem;
+            position: relative;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .brief-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* ── FAQ ─────────────────────────────────────────────── */
+        #faq {
+            background-color: var(--white);
+            padding: 7rem 2rem;
+        }
+
+        #faq h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        #faq .section-intro {
+            text-align: center;
+            max-width: 540px;
+            margin: 0 auto 4rem;
+            color: var(--text-secondary);
+        }
+
+        .faq-list {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .faq-item:first-child {
+            border-top: 1px solid var(--border-light);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 1.5rem 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .faq-question:hover { color: var(--gold); }
+
+        .faq-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--gold);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        .faq-answer {
+            display: none;
+            padding: 0 0 1.5rem 0;
+        }
+
+        .faq-item.open .faq-answer { display: block; }
+
+        .faq-answer p {
+            font-size: 0.95rem;
+            color: #4b5563;
+            line-height: 1.75;
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-answer p:last-child { margin-bottom: 0; }
+
+        /* ── Responsive additions ────────────────────────────── */
+        @media (max-width: 768px) {
+            #resources, #case-study, #sector-briefs, #faq {
+                padding: 4rem 1.5rem;
+            }
+            .briefs-grid {
+                grid-template-columns: 1fr;
+            }
+            .case-study-meta {
+                gap: 1rem;
+            }
+        }
+
         /* Scroll animations */
         .animate-on-scroll {
             opacity: 0;
@@ -1204,6 +1574,7 @@
                 <li><a href="#sectors">Sectors</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#why-bids-fail">Why Bids Fail</a></li>
+                <li><a href="#resources">Resources</a></li>
                 <li><a href="#contact" class="nav-cta">Request a Review</a></li>
             </ul>
         </nav>
@@ -1543,6 +1914,255 @@
             </div>
         </section>
 
+        <!-- ─── RESOURCES ────────────────────────────────────────── -->
+        <section id="resources">
+            <div class="container">
+                <span class="section-subtitle text-center" style="display:block">Sample Work</span>
+                <h2>Sample Deliverables</h2>
+                <p class="section-intro">Each BidReady engagement produces a formal written memo. The samples below are illustrative documents showing the format, depth, and structure of each service tier — using fictitious project data.</p>
+
+                <div class="resources-grid">
+
+                    <div class="resource-card animate-on-scroll">
+                        <div class="resource-type">Sample Document</div>
+                        <h3>Rapid Tender Readiness Scan</h3>
+                        <div class="resource-meta">PDF · 4 pages · USD 1,500–2,500 service</div>
+                        <p>Illustrative scan for a fictitious Southern Africa renewable energy IPP tender. Shows the eligibility assessment table, critical document inventory, red flag priority summary, and go/no-go determination format.</p>
+                        <a href="sample-tender-readiness-scan.pdf" class="btn-download" target="_blank">&#8595; Download Sample PDF</a>
+                    </div>
+
+                    <div class="resource-card animate-on-scroll">
+                        <div class="resource-type">Sample Document</div>
+                        <h3>Disqualification Risk Memo</h3>
+                        <div class="resource-meta">PDF · 6 pages · USD 2,500–4,500 service</div>
+                        <p>Illustrative memo for a fictitious East Africa water infrastructure procurement. Shows the risk categorisation table, documentary defect analysis, consortium structure review, and prioritised remediation roadmap.</p>
+                        <a href="sample-disqualification-risk-memo.pdf" class="btn-download" target="_blank">&#8595; Download Sample PDF</a>
+                    </div>
+
+                    <div class="resource-card animate-on-scroll">
+                        <div class="resource-type">Sample Document</div>
+                        <h3>Evaluation Alignment Review</h3>
+                        <div class="resource-meta">PDF · 7 pages · USD 5,000–12,000 service</div>
+                        <p>Illustrative review for a fictitious MENA desalination BOOT procurement. Shows the criterion-by-criterion scoring assessment, underclaimed category analysis, narrative upgrade recommendations, and estimated point recovery by category.</p>
+                        <a href="sample-evaluation-alignment-review.pdf" class="btn-download" target="_blank">&#8595; Download Sample PDF</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── CASE STUDY ────────────────────────────────────────── -->
+        <section id="case-study">
+            <div class="container">
+                <div class="case-study-inner animate-on-scroll">
+                    <span class="section-subtitle">Client Outcome</span>
+                    <h2>A submission-level problem found before submission.</h2>
+
+                    <div class="case-study-meta">
+                        <div class="case-meta-item">
+                            <strong>Sector</strong>
+                            Renewable Energy — Utility-Scale Solar IPP
+                        </div>
+                        <div class="case-meta-item">
+                            <strong>Region</strong>
+                            Southern Africa
+                        </div>
+                        <div class="case-meta-item">
+                            <strong>Client Type</strong>
+                            International IPP, first-time bidder in market
+                        </div>
+                        <div class="case-meta-item">
+                            <strong>Service Used</strong>
+                            Disqualification Risk Memo
+                        </div>
+                        <div class="case-meta-item">
+                            <strong>Time to Submission</strong>
+                            11 days at point of engagement
+                        </div>
+                    </div>
+
+                    <div class="case-body">
+                        <p>An international independent power producer was preparing to submit to a competitive utility-scale solar tender in Southern Africa — their first submission into this procurement programme. The internal bid team had been working on the submission for six weeks. With 11 days remaining, they engaged BidReady Advisory for a Disqualification Risk Memo.</p>
+
+                        <p>BidReady's review identified four disqualification-level defects and two medium-rated compliance risks across documentary, consortium structure, and local content categories. None of the four high-rated defects had been identified by the internal team. Two required external action — from the company's registered agent and from the local consortium partner — and would have been impossible to remediate in less than 72 hours if identified any later.</p>
+
+                        <p>The four defects identified were:</p>
+                    </div>
+
+                    <div class="case-finding-grid">
+                        <div class="case-finding">
+                            <div class="finding-label">Finding 1 — HIGH</div>
+                            <p>Certificate of Good Standing expired by 14 months. The RFP required a document less than six months old. Would have caused automatic disqualification at the administrative compliance gate.</p>
+                        </div>
+                        <div class="case-finding">
+                            <div class="finding-label">Finding 2 — HIGH</div>
+                            <p>Consortium agreement unsigned by local partner. The partner's authorised signatory had not been identified. Notarized countersignature required per tender clause. Remediated within 72 hours once escalated.</p>
+                        </div>
+                        <div class="case-finding">
+                            <div class="finding-label">Finding 3 — HIGH</div>
+                            <p>Bid security issued by a bank not on the procuring authority's approved institution list. The client's bank had issued the guarantee before the approved list was checked. New guarantee arranged with approved institution in four days.</p>
+                        </div>
+                        <div class="case-finding">
+                            <div class="finding-label">Finding 4 — HIGH</div>
+                            <p>Local equity interest in consortium agreement was 22%, below the RFP minimum of 26%. Consortium agreement redrafted and re-executed with correct equity allocation before submission.</p>
+                        </div>
+                    </div>
+
+                    <div class="case-body">
+                        <p>All four defects were remediated within the available window. The two medium-rated risks were also addressed. The submission was made on time and in full compliance. The client was shortlisted for the technical evaluation stage.</p>
+                    </div>
+
+                    <div class="case-outcome">
+                        <h4>Outcome</h4>
+                        <p>Four disqualification-level defects identified and remediated. Submission completed on time. Client shortlisted for technical evaluation. Without the pre-submission review, the bid would have been eliminated before the technical package was opened — and the client would not have known why until the outcome letter arrived.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── SECTOR BRIEFS ─────────────────────────────────────── -->
+        <section id="sector-briefs">
+            <div class="container">
+                <span class="section-subtitle text-center" style="display:block">Sector Intelligence</span>
+                <h2>Procurement Environments We Know</h2>
+                <p class="section-intro">African and Middle Eastern infrastructure procurement is specific enough that sector-general advisory routinely misses what matters. These are the environments we work in daily.</p>
+
+                <div class="briefs-grid">
+
+                    <div class="brief-card animate-on-scroll">
+                        <div class="brief-header">
+                            <div class="brief-tag">Sector Brief — Africa</div>
+                            <h3>Renewable Energy IPP Procurement</h3>
+                        </div>
+                        <div class="brief-body">
+                            <p>Competitive renewable energy procurement in Sub-Saharan Africa operates through a range of structured IPP programmes — REIPPP in South Africa, GET FiT in Uganda, Zambia's LUSIP, and country-specific AfDB and World Bank-funded rounds across the continent. Each has its own compliance architecture.</p>
+                            <p>The disqualification rate in these programmes is persistently high, and the causes are consistent across rounds: eligibility thresholds misread, consortium structure defects not identified until evaluation, documentary formality requirements underestimated, and local content commitments either insufficient or inadequately evidenced.</p>
+                            <p>Common bid risk areas in African renewables procurement:</p>
+                            <ul class="brief-list">
+                                <li>REIPPP local content and ownership compliance — the ownership structure and local content requirements are frequently misunderstood by first-time programme participants</li>
+                                <li>AfDB Standard Bidding Documents impose specific documentary requirements that differ from commercial procurement norms; non-compliance at the document-format level is common</li>
+                                <li>Consortium partner eligibility — local BEE partner structures under South African procurement rules carry specific compliance requirements that international bid teams consistently underweight</li>
+                                <li>GET FiT eligibility thresholds — financial capacity requirements are calculated on a per-project basis and are frequently assessed against the wrong base figures</li>
+                                <li>PPA bankability requirements imposed by development finance institutions intersect with bid eligibility in ways that are not always apparent from the tender document alone</li>
+                                <li>Environmental and social frameworks required by lenders (IFC PS vs. World Bank ESF) differ in material ways; the wrong framework reference in bid documentation signals unfamiliarity with the procurement environment</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="brief-card animate-on-scroll">
+                        <div class="brief-header">
+                            <div class="brief-tag">Sector Brief — Middle East &amp; Africa</div>
+                            <h3>Water Infrastructure &amp; Desalination</h3>
+                        </div>
+                        <div class="brief-body">
+                            <p>Water infrastructure procurement in the Middle East and across AfDB-funded African programmes operates through BOOT, BOT, and design-build-operate frameworks with extensive multilateral development bank involvement. The bid compliance requirements in these programmes are materially different from standard commercial procurement.</p>
+                            <p>Gulf-procured desalination and water treatment tenders — particularly those involving IsDB, KFAED, or Abu Dhabi Fund financing — carry specific documentary and structural requirements that European or Asian bid teams frequently encounter without adequate preparation. Local partner equity thresholds, national workforce participation commitments, and technology disclosure requirements are common sources of disqualification-level risk.</p>
+                            <p>Common bid risk areas in water infrastructure procurement:</p>
+                            <ul class="brief-list">
+                                <li>Local equity thresholds — Gulf procurements typically require 26–30% national equity participation in the consortium; the precise calculation method is not always clearly defined in the tender document</li>
+                                <li>Bank reference and financial disclosure requirements frequently specify a template format; bespoke letters from relationship banks are commonly rejected at the eligibility gate</li>
+                                <li>Technology disclosure obligations — BOOT procurements require detailed technology documentation that touches on proprietary information; the intersection of disclosure requirements and IP protection must be managed before submission</li>
+                                <li>AfDB Integrated Safeguards System requirements for water projects differ from IFC Performance Standards in specific ways that matter for bid compliance in Category A and Category B projects</li>
+                                <li>O&amp;M methodology — evaluation criteria in water BOOT rounds increasingly score operational capability alongside construction and financing; bid teams with construction backgrounds frequently underinvest in the O&amp;M narrative</li>
+                                <li>Brine management and environmental performance requirements have become active scoring dimensions in Gulf desalination procurement; generic commitments score at or near zero</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── FAQ ───────────────────────────────────────────────── -->
+        <section id="faq">
+            <div class="container">
+                <span class="section-subtitle text-center" style="display:block">Common Questions</span>
+                <h2>Frequently Asked Questions</h2>
+                <p class="section-intro">Questions we hear regularly from bidders and procurement teams considering an engagement.</p>
+
+                <div class="faq-list">
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Does BidReady write bids?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No. BidReady Advisory does not write bids, prepare technical submissions, or manage the submission process. We review what your team has prepared — and what the tender requires — and identify the gap between the two.</p>
+                            <p>This distinction is intentional. An advisory firm that also writes the bid has an inherent conflict of interest when reviewing it. BidReady's value is independence: we have no incentive to validate the document we are reviewing, only to find what evaluators will penalise.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            How quickly can you turn around a review?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The Rapid Tender Readiness Scan is delivered within 24–48 hours of receiving the tender documents. The Disqualification Risk Memo takes 2–4 business days. The Evaluation Alignment Review takes 3–5 business days.</p>
+                            <p>Timelines begin from the point at which we receive the complete tender document pack and, where applicable, the client's current draft submission materials. If your deadline is particularly compressed, contact us before engaging — we can usually accommodate urgent requests, but it is better to confirm availability first.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            What do I need to provide to start a review?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>For a Rapid Tender Readiness Scan: the complete RFP or tender document package, your submission deadline, and a brief note on your consortium structure and the key qualifications you are relying on to meet eligibility thresholds.</p>
+                            <p>For a Disqualification Risk Memo or Evaluation Alignment Review: the tender documents plus your current draft submission materials in whatever state they are in. You do not need a complete draft — a partial submission is more useful to us than a polished one, because it shows us where the gaps are before they are papered over.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            We already have a bid consultant managing our submission. Can BidReady still add value?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes — and this is in fact a common engagement structure. Bid consultants and proposal managers are typically responsible for producing the submission. BidReady provides an independent compliance and eligibility review that is separate from and complementary to the production process.</p>
+                            <p>In practice, bid consultants frequently welcome a structured pre-submission review because it provides a documented risk assessment that neither they nor their client has to prepare internally. It also provides a clear line of responsibility: if a disqualification risk is identified in a BidReady memo and is not acted on, that is a client decision, not an oversight.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            What happens if BidReady finds problems that cannot be fixed before the deadline?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We tell you clearly and early. If a review identifies risks that are not remediable within the submission window — a structural defect in the consortium agreement that requires board-level decision, a mandatory certification that takes longer to obtain than the available time — the memo says so, with a specific assessment of the likely consequence.</p>
+                            <p>In those cases, the memo gives you the information you need to make a decision: whether to proceed knowing the risk, whether to seek a submission deadline extension, or whether to withdraw and redirect resources. That is a better outcome than submitting and being disqualified without understanding why.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Do you work on tenders outside Africa and the Middle East?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our current practice focuses exclusively on renewable energy and water infrastructure procurement in Africa and the Middle East. This geographic and sectoral focus is intentional — the procurement environments in these regions are specific enough that breadth of coverage would dilute the quality of the review.</p>
+                            <p>If you are bidding on a project in a market adjacent to our current coverage — East African coastal infrastructure, Red Sea region energy projects, North African renewable energy programmes — we are happy to discuss whether the engagement is within our scope. Contact us at info@bidreadyglobal.com to confirm.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            How is BidReady different from a law firm or procurement consultant?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Law firms provide legal advice on specific provisions and, where instructed, legal opinions on compliance. BidReady provides a practical bid compliance assessment — oriented toward what will happen at the evaluation table, not what a court would decide. We operate upstream of legal risk: our goal is to identify what evaluators will use to reject the bid, which often has nothing to do with legal merit.</p>
+                            <p>Procurement consultants typically manage the procurement process on behalf of a procuring authority. BidReady works exclusively for the bidding side — specifically on pre-submission compliance and risk reduction. We do not advise procuring authorities, and we do not manage tender processes. If you are ever uncertain about a conflict of interest, we will tell you before accepting an engagement.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- ─── CONTACT ───────────────────────────────────────── -->
         <section id="contact">
             <div class="container">
@@ -1664,6 +2284,16 @@
                     </ul>
                 </div>
 
+                <div class="footer-links-group">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#resources">Sample Deliverables</a></li>
+                        <li><a href="#case-study">Case Study</a></li>
+                        <li><a href="#sector-briefs">Sector Briefs</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
                 <div class="footer-contact-group">
                     <h4>Contact</h4>
                     <p>
@@ -1710,6 +2340,14 @@
                 }
             });
         });
+
+        // FAQ toggle
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
 
         // Scroll-reveal animation
         const observer = new IntersectionObserver((entries) => {
