@@ -90,7 +90,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(11,22,40,.95);
 .why-card p{font-size:.82rem;color:var(--grey);line-height:1.65}
 @media(max-width:700px){.why-grid{grid-template-columns:1fr}}
 /* SECTORS */
-.sectors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sectors-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .sector-card{background:var(--navy-card);border:1px solid var(--border);border-radius:12px;padding:24px}
 .sector-card h3{font-size:.95rem;font-weight:700;margin-bottom:8px}
 .sector-card p{font-size:.8rem;color:var(--grey);line-height:1.6;margin-bottom:12px}
@@ -98,6 +98,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(11,22,40,.95);
 .sector-items li{font-size:.78rem;color:var(--grey-lt);display:flex;align-items:center;gap:6px}
 .sector-items li::before{content:'·';color:var(--green)}
 @media(max-width:800px){.sectors-grid{grid-template-columns:1fr}}
+@media(min-width:801px) and (max-width:1060px){.sectors-grid{grid-template-columns:repeat(2,1fr)}}
 /* FAILURE */
 .fail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .fail-item{background:var(--navy-card);border:1px solid var(--border);border-left:3px solid var(--red);
@@ -202,7 +203,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
     <li><a href="#faq">FAQ</a></li>
    </ul>
    <div class="nav-ctas">
-    <a href="https://app.bidreadyglobal.com" class="btn btn-outline btn-sm" target="_blank">BidReady Radar ↗</a>
+    <a href="https://app.bidreadyglobal.com" class="btn btn-outline btn-sm" target="_blank">View Samples ↗</a>
     <a href="#contact" class="btn btn-primary btn-sm">Request a Review</a>
    </div>
   </div>
@@ -226,10 +227,10 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
   <!-- BidReady Radar banner -->
   <div class="radar-banner reveal" style="transition-delay:.2s">
    <div class="radar-banner-text">
-    <h4>🔍 Introducing BidReady Radar — Live Tender Intelligence</h4>
-    <p>Continuously monitors AfDB, World Bank, EU Tenders, GCF, GIZ and 9 other donor platforms. Scores every opportunity for eligibility, compliance risk, ESG alignment, and bid-readiness — delivered to your inbox automatically.</p>
+    <h4>🔍 BidReady Radar — Private Client Intelligence</h4>
+    <p>Continuously monitors World Bank, AfDB, EU Global Gateway, Green Climate Fund, and 14 additional donor and procurement databases — scored for eligibility, compliance risk, and bid-readiness. Live screening is delivered through a private client portal; sample outputs are public.</p>
    </div>
-   <a href="https://app.bidreadyglobal.com" target="_blank" class="btn btn-gold" style="white-space:nowrap;flex-shrink:0">Try BidReady Radar →</a>
+   <a href="https://app.bidreadyglobal.com" target="_blank" class="btn btn-gold" style="white-space:nowrap;flex-shrink:0">View Samples →</a>
   </div>
 
   <div class="stats-row reveal" style="transition-delay:.3s">
@@ -361,11 +362,24 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
      <li>Multilateral development bank requirements</li>
     </ul>
    </div>
+   <div class="sector-card reveal" style="transition-delay:.3s">
+    <h3>♻️ Cleantech &amp; Environmental Technology</h3>
+    <p style="color:var(--grey);font-size:.8rem">Africa · MENA · Expansion Markets</p>
+    <ul class="sector-items">
+     <li>AI-powered waste sorting and recycling systems</li>
+     <li>Sensor-based environmental monitoring and compliance</li>
+     <li>Digital water management and smart utility platforms</li>
+     <li>Biotech solutions for water treatment (PFAS, microplastics)</li>
+     <li>Technology transfer and innovation procurement</li>
+     <li>GCF, UNDP/GEF, and EU innovation grant windows</li>
+     <li>Circular economy and waste-to-resource tenders</li>
+    </ul>
+   </div>
   </div>
   <div class="reveal" style="margin-top:36px">
    <h3 style="font-size:.9rem;font-weight:700;color:var(--grey-lt);margin-bottom:14px">Procurement Frameworks &amp; Funding Environments</h3>
    <div style="display:flex;flex-wrap:wrap;gap:8px">
-    <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">African Development Bank (AfDB)</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">World Bank / IFC</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">Islamic Development Bank (IsDB)</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">REIPPP — South Africa</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">GET FiT — East Africa</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">KFAED — Gulf-backed Projects</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">Abu Dhabi Fund for Development</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">IFC Performance Standards</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">AfDB Integrated Safeguards</span>
+    <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">African Development Bank (AfDB)</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">World Bank / IFC</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">Islamic Development Bank (IsDB)</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">REIPPP — South Africa</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">GET FiT — East Africa</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">KFAED — Gulf-backed Projects</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">Abu Dhabi Fund for Development</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">IFC Performance Standards</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">AfDB Integrated Safeguards</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">Green Climate Fund (GCF)</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">UNDP / GEF Small Grants</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">EU Global Gateway</span> <span style="font-size:.75rem;padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;color:var(--grey-lt)">Africa Enterprise Challenge Fund (AECF)</span>
    </div>
   </div>
  </div>
@@ -393,7 +407,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
     <p>BidReady Advisory exists because competitive procurement in African and Middle Eastern infrastructure is a discipline in its own right — and most bidders treat it as an afterthought until it is too late.</p>
     <p>The disqualification rate on competitive energy and water tenders across Sub-Saharan Africa and the MENA region is persistently high. The causes are nearly always the same: eligibility criteria misread, documentary requirements incomplete, consortium structures that do not hold under evaluation scrutiny. None of these require more time to fix. They require earlier attention.</p>
     <p>BidReady was founded to provide that upstream advisory function as a standalone, specialist service — not bundled into a broader consulting engagement, and not dependent on the same firm that wrote the bid to also review it.</p>
-    <p>We work exclusively in renewable energy and water infrastructure procurement across Africa and the Middle East. That narrow focus is intentional. The procurement environments in these sectors and regions are specific enough that sector-general advisory routinely misses what matters.</p>
+    <p>We work across renewable energy, water infrastructure, infrastructure consortia, and environmental technology procurement in Africa and the Middle East. That focused scope is intentional. The procurement environments in these sectors and regions are specific enough that sector-general advisory routinely misses what matters — particularly for cleantech and environmental technology companies entering emerging markets for the first time.</p>
    </div>
   </div>
  </div>
@@ -487,6 +501,30 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
  </div>
 </section>
 
+<!-- SAMPLE REPORT -->
+<section class="section" style="border-top:1px solid var(--border)">
+ <div class="container">
+  <div class="reveal" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px;background:var(--navy-card);border:1px solid var(--border);border-radius:14px;padding:36px 40px;">
+   <div style="flex:1;min-width:260px;">
+    <div class="label" style="margin-bottom:14px">Sample Output</div>
+    <h2 style="font-size:1.25rem;font-weight:700;margin-bottom:12px;">See exactly what subscribers receive.</h2>
+    <p style="font-size:.85rem;color:var(--grey);line-height:1.8;margin-bottom:8px;">Every Intelligence Weekly report is matched to your sector, geography, and donor framework profile — scored across 9 BidReadiness dimensions with Go/No-Go recommendations and compliance flags for each opportunity.</p>
+    <p style="font-size:.85rem;color:var(--grey);line-height:1.8;">The sample below uses a real client profile with the company name withheld.</p>
+   </div>
+   <div style="display:flex;flex-direction:column;gap:12px;flex-shrink:0;align-items:flex-start;">
+    <a href="BidReady_Public_Sample_Report.pdf" download style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--green);color:#fff;border-radius:6px;font-size:.85rem;font-weight:700;text-decoration:none;">
+     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+     Download Sample Report (PDF)
+    </a>
+    <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:transparent;color:var(--white);border:1px solid var(--border-lt);border-radius:6px;font-size:.85rem;font-weight:600;text-decoration:none;">
+     Request a Personalised Demo →
+    </a>
+    <p style="font-size:.7rem;color:var(--grey);max-width:240px;">Want a screening run against your own profile? Request a demo call — we'll show you your matched pipeline live.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="section" style="background:var(--navy-mid);border-top:1px solid var(--border)">
  <div class="container">
@@ -498,7 +536,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
     <p style="margin-top:16px;font-size:.84rem">You can also reach us directly at <a href="mailto:info@bidreadyglobal.com" style="color:var(--green)">info@bidreadyglobal.com</a>. We respond to all enquiries within one business day.</p>
     <div style="margin-top:28px;background:var(--navy-card);border:1px solid rgba(34,169,106,.2);border-radius:10px;padding:18px">
      <div style="font-size:.75rem;font-weight:700;color:var(--green);margin-bottom:8px">Also available: BidReady Radar</div>
-     <p style="font-size:.8rem;color:var(--grey);line-height:1.6">Continuous tender intelligence for your sector — scored opportunities delivered automatically. <a href="https://app.bidreadyglobal.com" target="_blank" style="color:var(--green)">Try the live screening tool →</a></p>
+     <p style="font-size:.8rem;color:var(--grey);line-height:1.6">Continuous tender intelligence for your sector — scored opportunities delivered automatically to client subscribers. <a href="https://app.bidreadyglobal.com" target="_blank" style="color:var(--green)">View sample outputs →</a></p>
     </div>
    </div>
    <div class="form-card reveal" style="transition-delay:.15s">
@@ -514,6 +552,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
         <option>Renewable Energy</option>
         <option>Water Infrastructure</option>
         <option>Infrastructure Consortium</option>
+        <option>Cleantech &amp; Environmental Technology</option>
         <option>Other</option>
        </select>
       </div>
@@ -568,7 +607,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
      <li><a href="#services">Rapid Readiness Scan</a></li>
      <li><a href="#services">Disqualification Risk Memo</a></li>
      <li><a href="#services">Evaluation Alignment Review</a></li>
-     <li><a href="https://app.bidreadyglobal.com" target="_blank">BidReady Radar ↗</a></li>
+     <li><a href="https://app.bidreadyglobal.com" target="_blank">BidReady Radar — Samples ↗</a></li>
     </ul>
    </div>
    <div class="footer-col">
@@ -623,4 +662,4 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 });
 </script>
 </body>
-</html><!-- redeploy nudge: 2026-04-28T15:37:34Z -->
+</html>
