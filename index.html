@@ -1,8 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>BidReady Advisory | Pre-Submission Tender Advisory — Africa & Middle East</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>BidReady Global | Advanced Tender Intelligence &amp; Compliance Screening</title>
+<meta name="description" content="BidReady Global finds bid-killer defects before evaluators do. Advanced tender intelligence and compliance screening for MDB-financed, donor-funded and public-sector procurement in Africa and the Middle East."/>
+<link rel="canonical" href="https://bidreadyglobal.com/"/>
+<meta name="theme-color" content="#0B1628"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://bidreadyglobal.com/"/>
+<meta property="og:title" content="BidReady Global — Advanced Tender Intelligence &amp; Compliance Screening"/>
+<meta property="og:description" content="We find bid-killer defects before evaluators do. Pre-submission tender intelligence and compliance screening for infrastructure, energy, water and cleantech procurement in Africa and the Middle East."/>
+<meta property="og:site_name" content="BidReady Global"/>
+<meta property="og:image" content="https://bidreadyglobal.com/BidReady_Logo.png"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="BidReady Global — Advanced Tender Intelligence &amp; Compliance Screening"/>
+<meta name="twitter:description" content="We find bid-killer defects before evaluators do."/>
+<meta name="twitter:image" content="https://bidreadyglobal.com/BidReady_Logo.png"/>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/BidReady_Logo.png"/>
+<link rel="apple-touch-icon" href="/BidReady_Logo.png"/>
+
+<!-- Google tag (gtag.js) — GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WPV3R3JZM8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WPV3R3JZM8');
+</script>
+
+<!-- Google Search Console verification -->
+<meta name="google-site-verification" content="kvZSevr3TKde2Kv3fKqb_RpqeNhAtE_UWwOcwLAIfw0"/>
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Organization",
+      "@id":"https://bidreadyglobal.com/#org",
+      "name":"BidReady Global",
+      "url":"https://bidreadyglobal.com/",
+      "logo":"https://bidreadyglobal.com/BidReady_Logo.png",
+      "email":"info@bidreadyglobal.com",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"250 Park Avenue, 7th Floor",
+        "addressLocality":"New York",
+        "addressRegion":"NY",
+        "postalCode":"10177",
+        "addressCountry":"US"
+      },
+      "telephone":"+1-212-444-1813",
+      "areaServed":["Africa","Middle East","MENA"],
+      "knowsAbout":["Tender intelligence","Compliance screening","Bid eligibility review","Donor-funded procurement","Multilateral development bank tenders","REIPPP","AfDB","World Bank","Green Climate Fund"]
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://bidreadyglobal.com/#website",
+      "url":"https://bidreadyglobal.com/",
+      "name":"BidReady Global",
+      "publisher":{"@id":"https://bidreadyglobal.com/#org"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Does BidReady write bids?","acceptedAnswer":{"@type":"Answer","text":"No. BidReady Global does not write bids, prepare technical submissions, or manage the submission process. We review what your team has prepared — and what the tender requires — and identify the gap between the two."}},
+        {"@type":"Question","name":"How quickly can you turn around a review?","acceptedAnswer":{"@type":"Answer","text":"The Rapid Tender Readiness Scan is delivered within 24–48 hours. The Disqualification Risk Memo takes 2–4 business days. The Evaluation Alignment Review takes 3–5 business days."}},
+        {"@type":"Question","name":"Do you work on tenders outside Africa and the Middle East?","acceptedAnswer":{"@type":"Answer","text":"Our current practice focuses on renewable energy, water, infrastructure and cleantech procurement in Africa and the Middle East. Contact info@bidreadyglobal.com to confirm scope for other regions."}}
+      ]
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
@@ -39,7 +117,19 @@ nav{position:sticky;top:0;z-index:100;background:rgba(11,22,40,.95);
 .btn-outline{background:transparent;color:var(--white);border:1px solid var(--border)}
 .btn-outline:hover{border-color:var(--grey-lt)}
 .btn-sm{padding:8px 16px;font-size:.8rem}
-@media(max-width:768px){.nav-links{display:none}}
+.menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--white);padding:8px 10px;border-radius:6px;cursor:pointer}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--white);margin:3px 0;transition:transform .2s,opacity .2s}
+.menu-btn.open span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.menu-btn.open span:nth-child(2){opacity:0}
+.menu-btn.open span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .menu-btn{display:block}
+  .nav-links.open{display:flex;position:absolute;top:64px;left:0;right:0;background:var(--navy-mid);flex-direction:column;padding:18px 24px;border-bottom:1px solid var(--border);gap:14px;align-items:flex-start}
+  .nav-links.open li{width:100%}
+  .nav-links.open li a{display:block;padding:6px 0;font-size:.95rem;color:var(--white)}
+  .nav-ctas .btn{padding:8px 12px;font-size:.74rem}
+}
 /* LABEL */
 .label{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.12em;
   text-transform:uppercase;color:var(--gold);background:rgba(212,168,67,.08);
@@ -194,9 +284,10 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
 <nav>
  <div class="container">
   <div class="nav-inner">
-   <a href="/" style="display:flex;align-items:center"><img src="BidReady_Logo.png" alt="BidReady" style="height:36px;width:auto"></a>
-   <ul class="nav-links">
+   <a href="/" style="display:flex;align-items:center"><img src="BidReady_Logo.png" alt="BidReady Global" style="height:36px;width:auto"></a>
+   <ul class="nav-links" id="navLinks">
     <li><a href="#services">Services</a></li>
+    <li><a href="#when">When</a></li>
     <li><a href="#sectors">Sectors</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#why-bids-fail">Why Bids Fail</a></li>
@@ -205,6 +296,9 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
    <div class="nav-ctas">
     <a href="https://app.bidreadyglobal.com" class="btn btn-outline btn-sm" target="_blank">View Samples ↗</a>
     <a href="#contact" class="btn btn-primary btn-sm">Request a Review</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" onclick="(function(b){var n=document.getElementById('navLinks');var o=n.classList.toggle('open');b.classList.toggle('open',o);b.setAttribute('aria-expanded',o);})(this)">
+     <span></span><span></span><span></span>
+    </button>
    </div>
   </div>
  </div>
@@ -214,10 +308,10 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
 <section class="hero">
  <div class="container">
   <div class="reveal">
-   <div class="label">Specialist Upstream Advisory</div>
-   <h1>Your bid fails before<br>the <span>price is read.</span></h1>
-   <p class="hero-sub">BidReady Advisory provides specialist pre-submission review for renewable energy and water infrastructure bidders in Africa and the Middle East — catching disqualification risk before it reaches the evaluation table.</p>
-   <p class="hero-note">We focus exclusively on what happens upstream: eligibility readiness, documentary compliance, consortium structure, and evaluator-criteria alignment. Not bid writing. Not project management. Bid risk, resolved in advance.</p>
+   <div class="label">Advanced Tender Intelligence &amp; Compliance Screening</div>
+   <h1>We find <span>bid-killer defects</span><br>before evaluators do.</h1>
+   <p class="hero-sub">BidReady Global reviews tender submissions before filing — identifying compliance gaps, missing documents, eligibility risks, consortium issues, and evaluator-alignment weaknesses while there is still time to fix them.</p>
+   <p class="hero-note">Pre-submission tender intelligence and compliance screening for MDB-financed, donor-funded, and public-sector procurement. Not bid writing. Not project management. An independent review of the part of the bid that costs deals.</p>
    <div class="hero-ctas">
     <a href="#contact" class="btn btn-primary">Request a Tender Review</a>
     <a href="#services" class="btn btn-outline">View Services</a>
@@ -248,7 +342,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
   <div class="reveal" style="margin-bottom:40px">
    <div class="label">Our Services</div>
    <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;margin-bottom:10px">Three structured review products.</h2>
-   <p style="color:var(--grey);max-width:600px;font-size:.95rem;line-height:1.75">Each delivers a formal written memo with specific findings, gap identification, and a clear remediation roadmap — not a generic advisory report.</p>
+   <p style="color:var(--grey);max-width:600px;font-size:.95rem;line-height:1.75">Each delivers a formal written memo with specific findings, gap identification, and a clear remediation roadmap — not a generic compliance report.</p>
   </div>
   <div class="services-grid">
    <div class="service-card sc-scan reveal">
@@ -300,6 +394,58 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
  </div>
 </section>
 
+
+<!-- WHEN TO BRING US IN -->
+<section id="when" class="section" style="background:var(--navy);border-top:1px solid var(--border)">
+ <div class="container">
+  <div class="reveal" style="margin-bottom:36px">
+   <div class="label label-green">Engagement Timing</div>
+   <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700">When to Bring BidReady In</h2>
+   <p style="color:var(--grey);max-width:640px;font-size:.95rem;line-height:1.75;margin-top:10px">The earlier we engage, the more risk we can prevent. Most clients work with us at one of these moments:</p>
+  </div>
+  <div class="why-grid">
+   <div class="why-card reveal"><h4>🧭 Before deciding to bid</h4><p>You've spotted a tender or grant opportunity and want an independent read on whether you can realistically meet eligibility, local-content, and ESG thresholds before committing internal resources to a submission.</p></div>
+   <div class="why-card reveal" style="transition-delay:.07s"><h4>🤝 Building or expanding a consortium</h4><p>You're assembling partners, sponsors, EPCs, or local participants and need a structural review to confirm the consortium will hold under evaluator scrutiny.</p></div>
+   <div class="why-card reveal" style="transition-delay:.14s"><h4>📝 Mid-bid, alongside drafting</h4><p>Your team is drafting the technical and financial proposal — and no one is independently checking admissibility, documentary compliance, or evaluator-criteria alignment in parallel.</p></div>
+   <div class="why-card reveal" style="transition-delay:.21s"><h4>⏱ Final pre-submission review</h4><p>Days before filing, you need a structured compliance check across documents, signatures, guarantees, and consortium attestations.</p></div>
+   <div class="why-card reveal" style="transition-delay:.28s"><h4>🔁 After a lost bid</h4><p>You were disqualified or scored poorly and want a structured forensic review to identify what failed — and a process to prevent it on the next submission.</p></div>
+   <div class="why-card reveal" style="transition-delay:.35s"><h4>🌍 Entering a new framework</h4><p>First submission into AfDB, World Bank, IFC, GCF, REIPPP, or a new sovereign procurement programme where the rules differ from what your team is used to.</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="section" style="background:var(--navy-mid);border-top:1px solid var(--border)">
+ <div class="container">
+  <div class="reveal" style="margin-bottom:28px">
+   <div class="label">Client Outcome</div>
+   <h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:700">A submission-level problem found before submission.</h2>
+  </div>
+  <div class="case-study reveal">
+   <div class="cs-header">
+    <h3 style="font-size:.95rem;font-weight:700">International IPP — Utility-Scale Solar, Southern Africa</h3>
+    <div class="cs-meta">
+     <span>Renewable Energy</span><span>Southern Africa</span><span>First-time programme bidder</span><span>Service: Disqualification Risk Memo</span><span>11 days to submission at point of engagement</span>
+    </div>
+   </div>
+   <div class="cs-body">
+    <p>An international independent power producer was preparing to submit to a competitive utility-scale solar tender in Southern Africa — their first submission into this procurement programme. The internal bid team had been working on the submission for six weeks. With 11 days remaining, they engaged BidReady Global for a Disqualification Risk Memo.</p>
+    <p>BidReady's review identified <strong>four disqualification-level defects</strong> and two medium-rated compliance risks across documentary, consortium structure, and local content categories. None of the four high-rated defects had been identified by the internal team. Two required external action — from the company's registered agent and from the local consortium partner — and would have been impossible to remediate in less than 72 hours if identified any later.</p>
+    <div class="findings">
+     <div class="finding"><div class="finding-badge">Finding 1 — HIGH</div><p>Certificate of Good Standing expired by 14 months. The RFP required a document less than six months old. Would have caused automatic disqualification at the administrative compliance gate.</p></div>
+     <div class="finding"><div class="finding-badge">Finding 2 — HIGH</div><p>Consortium agreement unsigned by local partner. The partner's authorised signatory had not been identified. Notarized countersignature required per tender clause. Remediated within 72 hours once escalated.</p></div>
+     <div class="finding"><div class="finding-badge">Finding 3 — HIGH</div><p>Bid security issued by a bank not on the procuring authority's approved institution list. New guarantee arranged with approved institution in four days.</p></div>
+     <div class="finding"><div class="finding-badge">Finding 4 — HIGH</div><p>Local equity interest in consortium agreement was 22%, below the RFP minimum of 26%. Consortium agreement redrafted and re-executed with correct equity allocation before submission.</p></div>
+    </div>
+    <div class="cs-outcome">
+     <h4>Outcome: Four disqualification-level defects identified and remediated. Client shortlisted for technical evaluation.</h4>
+     <p>Without the pre-submission review, the bid would have been eliminated before the technical package was opened — and the client would not have known why until the outcome letter arrived.</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
 <!-- WHY BIDREADY -->
 <section id="why" class="section">
  <div class="container">
@@ -308,7 +454,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
    <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700">We operate in a lane most firms leave unoccupied.</h2>
   </div>
   <div class="why-grid">
-   <div class="why-card reveal"><h4>🔍 Upstream, Not Downstream</h4><p>We engage before the narrative is written and before pricing is submitted. Most advisory services review documents after the fact. We identify risk while there is still time to act.</p></div>
+   <div class="why-card reveal"><h4>🔍 Upstream, Not Downstream</h4><p>We engage before the narrative is written and before pricing is submitted. Most consulting services review documents after the fact. We identify risk while there is still time to act.</p></div>
    <div class="why-card reveal" style="transition-delay:.07s"><h4>🌍 Specialist Sector Knowledge</h4><p>African renewable energy and water infrastructure procurement environments carry specific compliance requirements — AfDB frameworks, REIPPP-style eligibility criteria, BOOT structure requirements — that generalist consultants routinely miss.</p></div>
    <div class="why-card reveal" style="transition-delay:.14s"><h4>📄 Formal Written Memos</h4><p>Every engagement produces a structured written document with specific findings. Not a call with general impressions. Not a workshop. A formal memo your bid team can act on.</p></div>
    <div class="why-card reveal" style="transition-delay:.21s"><h4>⏱ Compressed Timelines</h4><p>Our Rapid Scan delivers in 24–48 hours. Even the most comprehensive Evaluation Alignment Review takes no more than five business days. We are built around your deadline.</p></div>
@@ -392,22 +538,22 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
    <div class="reveal">
     <div class="about-avatar">G</div>
     <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:4px">Grant de Graf</h2>
-    <p style="font-size:.82rem;color:var(--gold);margin-bottom:14px">Founder, BidReady Advisory</p>
+    <p style="font-size:.82rem;color:var(--gold);margin-bottom:14px">Founder &amp; CEO, BidReady Global</p>
     <div class="about-skills">
-     <div class="about-skill">Infrastructure procurement advisory and bid strategy</div>
+     <div class="about-skill">Infrastructure procurement intelligence and bid strategy</div>
      <div class="about-skill">Bid compliance review and disqualification risk assessment</div>
      <div class="about-skill">Consortium structure and partner eligibility analysis</div>
      <div class="about-skill">Multilateral development bank procurement frameworks</div>
-     <div class="about-skill">Pre-submission advisory for competitive IPP and EPC tenders</div>
+     <div class="about-skill">Pre-submission compliance screening for competitive IPP and EPC tenders</div>
     </div>
    </div>
    <div class="reveal" style="transition-delay:.15s">
     <div class="label">About the Firm</div>
     <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:700;margin-bottom:20px">Built for infrastructure procurement in emerging markets.</h2>
-    <p>BidReady Advisory exists because competitive procurement in African and Middle Eastern infrastructure is a discipline in its own right — and most bidders treat it as an afterthought until it is too late.</p>
-    <p>The disqualification rate on competitive energy and water tenders across Sub-Saharan Africa and the MENA region is persistently high. The causes are nearly always the same: eligibility criteria misread, documentary requirements incomplete, consortium structures that do not hold under evaluation scrutiny. None of these require more time to fix. They require earlier attention.</p>
-    <p>BidReady was founded to provide that upstream advisory function as a standalone, specialist service — not bundled into a broader consulting engagement, and not dependent on the same firm that wrote the bid to also review it.</p>
-    <p>We work across renewable energy, water infrastructure, infrastructure consortia, and environmental technology procurement in Africa and the Middle East. That focused scope is intentional. The procurement environments in these sectors and regions are specific enough that sector-general advisory routinely misses what matters — particularly for cleantech and environmental technology companies entering emerging markets for the first time.</p>
+    <p>Led by Grant de Graf, BidReady Global combines legal-document review discipline, infrastructure procurement analysis, capital markets experience, and emerging-market transaction strategy. The firm operates at the point where most bids fail: not the technical solution, but eligibility, documentary compliance, consortium structure, and evaluator alignment.</p>
+    <p>The disqualification rate on competitive energy, water and cleantech tenders across Sub-Saharan Africa and the MENA region is persistently high. The causes are nearly always the same — eligibility criteria misread, documentary requirements incomplete, consortium structures that do not hold under evaluation scrutiny. None of these require more time to fix. They require earlier attention.</p>
+    <p>BidReady was founded to provide that pre-submission intelligence and screening function as a standalone, specialist service — not bundled into a broader consulting engagement, and not dependent on the same firm that wrote the bid to also review it.</p>
+    <p>We work across renewable energy, water infrastructure, infrastructure consortia, and environmental technology procurement — focused on Africa and the Middle East, where MDB-financed and donor-funded procurement environments are specific enough that sector-general advice routinely misses what matters.</p>
    </div>
   </div>
  </div>
@@ -450,37 +596,6 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
  </div>
 </section>
 
-<!-- CASE STUDY -->
-<section class="section" style="background:var(--navy-mid);border-top:1px solid var(--border)">
- <div class="container">
-  <div class="reveal" style="margin-bottom:28px">
-   <div class="label">Client Outcome</div>
-   <h2 style="font-size:clamp(1.5rem,3vw,2rem);font-weight:700">A submission-level problem found before submission.</h2>
-  </div>
-  <div class="case-study reveal">
-   <div class="cs-header">
-    <h3 style="font-size:.95rem;font-weight:700">International IPP — Utility-Scale Solar, Southern Africa</h3>
-    <div class="cs-meta">
-     <span>Renewable Energy</span><span>Southern Africa</span><span>First-time programme bidder</span><span>Service: Disqualification Risk Memo</span><span>11 days to submission at point of engagement</span>
-    </div>
-   </div>
-   <div class="cs-body">
-    <p>An international independent power producer was preparing to submit to a competitive utility-scale solar tender in Southern Africa — their first submission into this procurement programme. The internal bid team had been working on the submission for six weeks. With 11 days remaining, they engaged BidReady Advisory for a Disqualification Risk Memo.</p>
-    <p>BidReady's review identified <strong>four disqualification-level defects</strong> and two medium-rated compliance risks across documentary, consortium structure, and local content categories. None of the four high-rated defects had been identified by the internal team. Two required external action — from the company's registered agent and from the local consortium partner — and would have been impossible to remediate in less than 72 hours if identified any later.</p>
-    <div class="findings">
-     <div class="finding"><div class="finding-badge">Finding 1 — HIGH</div><p>Certificate of Good Standing expired by 14 months. The RFP required a document less than six months old. Would have caused automatic disqualification at the administrative compliance gate.</p></div>
-     <div class="finding"><div class="finding-badge">Finding 2 — HIGH</div><p>Consortium agreement unsigned by local partner. The partner's authorised signatory had not been identified. Notarized countersignature required per tender clause. Remediated within 72 hours once escalated.</p></div>
-     <div class="finding"><div class="finding-badge">Finding 3 — HIGH</div><p>Bid security issued by a bank not on the procuring authority's approved institution list. New guarantee arranged with approved institution in four days.</p></div>
-     <div class="finding"><div class="finding-badge">Finding 4 — HIGH</div><p>Local equity interest in consortium agreement was 22%, below the RFP minimum of 26%. Consortium agreement redrafted and re-executed with correct equity allocation before submission.</p></div>
-    </div>
-    <div class="cs-outcome">
-     <h4>Outcome: Four disqualification-level defects identified and remediated. Client shortlisted for technical evaluation.</h4>
-     <p>Without the pre-submission review, the bid would have been eliminated before the technical package was opened — and the client would not have known why until the outcome letter arrived.</p>
-    </div>
-   </div>
-  </div>
- </div>
-</section>
 
 <!-- FAQ -->
 <section id="faq" class="section">
@@ -490,7 +605,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
    <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700">Frequently Asked Questions</h2>
   </div>
   <div class="faq reveal">
-   <div class="faq-item"><div class="faq-q">Does BidReady write bids?</div><div class="faq-a">No. BidReady Advisory does not write bids, prepare technical submissions, or manage the submission process. We review what your team has prepared — and what the tender requires — and identify the gap between the two. An advisory firm that also writes the bid has an inherent conflict of interest when reviewing it. BidReady's value is independence: we have no incentive to validate the document we are reviewing, only to find what evaluators will penalise.</div></div>
+   <div class="faq-item"><div class="faq-q">Does BidReady write bids?</div><div class="faq-a">No. BidReady Global does not write bids, prepare technical submissions, or manage the submission process. We review what your team has prepared — and what the tender requires — and identify the gap between the two. A firm that also writes the bid has an inherent conflict of interest when reviewing it. BidReady's value is independence: we have no incentive to validate the document we are reviewing, only to find what evaluators will penalise.</div></div>
    <div class="faq-item"><div class="faq-q">How quickly can you turn around a review?</div><div class="faq-a">The Rapid Tender Readiness Scan is delivered within 24–48 hours of receiving the tender documents. The Disqualification Risk Memo takes 2–4 business days. The Evaluation Alignment Review takes 3–5 business days. Timelines begin from the point at which we receive the complete tender document pack. If your deadline is particularly compressed, contact us before engaging — we can usually accommodate urgent requests, but it is better to confirm availability first.</div></div>
    <div class="faq-item"><div class="faq-q">What do I need to provide to start a review?</div><div class="faq-a">For a Rapid Tender Readiness Scan: the complete RFP or tender document package, your submission deadline, and a brief note on your consortium structure and the key qualifications you are relying on to meet eligibility thresholds. For a Disqualification Risk Memo or Evaluation Alignment Review: the tender documents plus your current draft submission materials in whatever state they are in. You do not need a complete draft — a partial submission is more useful to us than a polished one, because it shows us where the gaps are before they are papered over.</div></div>
    <div class="faq-item"><div class="faq-q">We already have a bid consultant managing our submission. Can BidReady still add value?</div><div class="faq-a">Yes — and this is in fact a common engagement structure. Bid consultants and proposal managers are typically responsible for producing the submission. BidReady provides an independent compliance and eligibility review that is separate from and complementary to the production process. In practice, bid consultants frequently welcome a structured pre-submission review because it provides a documented risk assessment that neither they nor their client has to prepare internally.</div></div>
@@ -599,7 +714,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
   <div class="footer-top">
    <div class="footer-brand">
     <div><img src="BidReady_Logo.png" alt="BidReady" style="height:28px;width:auto"></div>
-    <p>Specialist pre-submission tender advisory for renewable energy and water infrastructure procurement in Africa and the Middle East.</p>
+    <p>Advanced tender intelligence and compliance screening for MDB-financed, donor-funded, and public-sector procurement in Africa and the Middle East.</p>
    </div>
    <div class="footer-col">
     <h5>Services</h5>
@@ -622,7 +737,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
    </div>
   </div>
   <div class="footer-bottom">
-   <span>© 2026 BidReady Advisory. All rights reserved.</span>
+   <span>© 2026 BidReady Global. All rights reserved.</span>
    <span>info@bidreadyglobal.com</span>
   </div>
  </div>
@@ -653,9 +768,15 @@ document.querySelectorAll('.reveal').forEach(el=>{
  io.observe(el);
 });
 
-// Smooth scroll
+// Smooth scroll + auto-close mobile menu on tap
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
  a.addEventListener('click',e=>{
+  const nav=document.getElementById('navLinks');
+  const btn=document.getElementById('menuBtn');
+  if(nav&&nav.classList.contains('open')){
+    nav.classList.remove('open');
+    if(btn){btn.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+  }
   const t=document.querySelector(a.getAttribute('href'));
   if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
  });
