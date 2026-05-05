@@ -1,0 +1,5 @@
+# bidreadyglobal.com
+User-agent: *
+Allow: /
+
+Sitemap: https://bidreadyglobal.com/sitemap.xml
