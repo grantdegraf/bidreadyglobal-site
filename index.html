@@ -287,6 +287,59 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
 .reveal.pre-reveal{opacity:0;transform:translateY(16px)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 </style>
+
+<!-- Tesseract.js for business-card OCR (deferred, ~5MB on demand) -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.1.1/tesseract.min.js" defer></script>
+
+<style>
+  /* Scan modal */
+  .scan-modal{display:none;position:fixed;inset:0;z-index:1000;
+    background:rgba(5,12,24,.92);backdrop-filter:blur(8px);
+    align-items:center;justify-content:center;padding:20px}
+  .scan-modal.open{display:flex}
+  .scan-box{background:var(--navy-card);border:1px solid var(--border);
+    border-radius:14px;width:100%;max-width:520px;overflow:hidden;
+    box-shadow:0 32px 80px rgba(0,0,0,.7)}
+  .scan-hdr{display:flex;align-items:center;justify-content:space-between;
+    padding:16px 22px;border-bottom:1px solid var(--border);background:var(--navy-mid)}
+  .scan-hdr h4{font-size:.95rem;font-weight:700;margin:0}
+  .scan-hdr p{font-size:.74rem;color:var(--grey);margin:2px 0 0}
+  .scan-close{background:none;border:none;color:var(--grey);font-size:1.4rem;
+    cursor:pointer;padding:4px;line-height:1}
+  .scan-body{padding:22px}
+  .scan-cam{position:relative;border-radius:10px;overflow:hidden;background:#000;
+    margin-bottom:14px;min-height:180px;display:flex;align-items:center;justify-content:center}
+  #scanVideo{width:100%;display:block;border-radius:10px}
+  .scan-cam-err{display:none;text-align:center;padding:30px 18px;color:var(--grey)}
+  .scan-cam-err.show{display:flex;flex-direction:column;align-items:center}
+  #scanCanvas{display:none}
+  .scan-row{display:flex;gap:10px;align-items:center}
+  .scan-btn{padding:11px;border-radius:7px;font-weight:700;font-size:.86rem;
+    cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;gap:8px;flex:1}
+  .scan-btn-primary{background:var(--gold);color:var(--navy)}
+  .scan-btn-secondary{background:var(--navy-mid);color:var(--white);
+    border:1px solid var(--border-lt)}
+  .scan-progress-bar{height:3px;background:var(--navy-mid);border-radius:99px;overflow:hidden;margin-top:14px}
+  .scan-progress-bar .fill{height:100%;background:var(--gold);width:0;transition:width .3s}
+  .scan-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .scan-fields .full{grid-column:1/-1}
+  .scan-fields label{font-size:.7rem;color:var(--grey);display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em}
+  .scan-fields input{background:var(--navy-mid);border:1px solid var(--border);
+    border-radius:6px;padding:9px 11px;font-size:.84rem;color:var(--white);
+    font-family:inherit;outline:none;width:100%}
+  .scan-fields input:focus{border-color:var(--gold)}
+  #scan-raw{margin-top:8px;font-size:.7rem;color:var(--grey);background:var(--navy-mid);
+    border:1px solid var(--border);border-radius:6px;padding:10px;line-height:1.5;
+    white-space:pre-wrap;max-height:96px;overflow-y:auto}
+  .scan-cta-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;
+    background:var(--navy-mid);border:1px solid var(--gold);color:var(--gold);
+    border-radius:7px;font-weight:700;font-size:.82rem;cursor:pointer;
+    margin-bottom:14px;transition:background .15s}
+  .scan-cta-btn:hover{background:rgba(212,168,67,.08)}
+  @keyframes scanSpin{to{transform:rotate(360deg)}}
+  .scan-spin{animation:scanSpin 1.2s linear infinite}
+</style>
 </head>
 <body>
 
@@ -666,14 +719,18 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
     </div>
    </div>
    <div class="form-card reveal" style="transition-delay:.15s">
-    <form onsubmit="handleSubmit(event)">
+    <form id="contactForm" onsubmit="handleSubmit(event)">
+     <button type="button" class="scan-cta-btn" onclick="openScanModal()">
+       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="4"/></svg>
+       Scan a business card to autofill
+     </button>
      <div class="form-grid">
-      <div class="form-field"><label>Company Name</label><input type="text" placeholder="Your company" required></div>
-      <div class="form-field"><label>Contact Name</label><input type="text" placeholder="Your name" required></div>
-      <div class="form-field"><label>Email</label><input type="email" placeholder="email@company.com" required></div>
-      <div class="form-field"><label>Phone (optional)</label><input type="tel" placeholder="+1 234 567 8900"></div>
+      <div class="form-field"><label>Company Name</label><input type="text" name="company" placeholder="Your company" required></div>
+      <div class="form-field"><label>Contact Name</label><input type="text" name="full_name" placeholder="Your name" required></div>
+      <div class="form-field"><label>Email</label><input type="email" name="email" placeholder="email@company.com" required></div>
+      <div class="form-field"><label>Phone (optional)</label><input type="tel" name="phone" placeholder="+1 234 567 8900"></div>
       <div class="form-field"><label>Sector</label>
-       <select>
+       <select name="sector">
         <option value="">Select sector</option>
         <option>Renewable Energy</option>
         <option>Water Infrastructure</option>
@@ -683,7 +740,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
        </select>
       </div>
       <div class="form-field"><label>Geography</label>
-       <select>
+       <select name="region">
         <option value="">Select region</option>
         <option>Sub-Saharan Africa</option>
         <option>Middle East &amp; North Africa</option>
@@ -693,10 +750,10 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
         <option>Other</option>
        </select>
       </div>
-      <div class="form-field"><label>Tender Name / Reference</label><input type="text" placeholder="Name or reference"></div>
-      <div class="form-field"><label>Submission Deadline</label><input type="date"></div>
+      <div class="form-field"><label>Tender Name / Reference</label><input type="text" name="tender_link" placeholder="Name or reference"></div>
+      <div class="form-field"><label>Submission Deadline</label><input type="date" name="deadline"></div>
       <div class="form-field full"><label>Service Needed</label>
-       <select>
+       <select name="opportunity_type">
         <option value="">Select service</option>
         <option>Rapid Tender Readiness Scan (24–48 hrs)</option>
         <option>Disqualification Risk Memo (2–4 days)</option>
@@ -704,7 +761,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
         <option>Not sure — recommend the right option</option>
        </select>
       </div>
-      <div class="form-field full"><label>Additional Notes</label><textarea placeholder="Any context that will help us scope the engagement"></textarea></div>
+      <div class="form-field full"><label>Additional Notes</label><textarea name="message" placeholder="Any context that will help us scope the engagement"></textarea></div>
      </div>
      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:13px">Submit Review Request</button>
     </form>
@@ -761,10 +818,175 @@ document.querySelectorAll('.faq-q').forEach(q=>{
 });
 
 // Form
-function handleSubmit(e){
+async function handleSubmit(e){
  e.preventDefault();
- e.target.style.display='none';
- document.getElementById('form-success').style.display='block';
+ const form = e.target;
+ const submitBtn = form.querySelector('button[type=submit]');
+ const fd = new FormData(form);
+ fd.append('form-name','contact');
+ fd.append('source','bidreadyglobal.com');
+ const enc = new URLSearchParams(fd).toString();
+ if(submitBtn){submitBtn.disabled=true;submitBtn.style.opacity='.6';submitBtn.textContent='Sending…';}
+ let ok = false;
+ try{
+   // Cross-origin POST to Netlify Forms on the app site (form-name "contact")
+   const res = await fetch('https://app.bidreadyglobal.com/', {
+     method:'POST',
+     mode:'no-cors',          // Netlify Forms accepts opaque POSTs
+     headers:{'Content-Type':'application/x-www-form-urlencoded'},
+     body: enc
+   });
+   ok = true; // no-cors returns opaque; Netlify accepts and writes the row
+ }catch(err){
+   console.error('contact submit failed', err);
+   ok = false;
+ }
+ if(submitBtn){submitBtn.disabled=false;submitBtn.style.opacity='1';submitBtn.textContent='Submit Review Request';}
+ if(ok){
+   try{ if(typeof gtag==='function') gtag('event','generate_lead',{form_id:'contactForm',form_location:'marketing_contact_section'}); }catch(_){}
+   form.style.display='none';
+   document.getElementById('form-success').style.display='block';
+ }else{
+   alert('We hit a snag sending your details. Please email info@bidreadyglobal.com.');
+ }
+}
+
+// ─── BUSINESS CARD SCANNER ─────────────────────────────────────────────
+let scanStream = null;
+let scanImgData = null;
+
+async function openScanModal(){
+  const modal = document.getElementById('scanModal');
+  modal.classList.add('open');
+  showScanStep(1);
+  try{
+    scanStream = await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'},width:{ideal:1280},height:{ideal:720}}});
+    const v = document.getElementById('scanVideo');
+    v.srcObject = scanStream;
+    v.style.display='block';
+    document.getElementById('scanCaptureBtn').style.display='flex';
+    document.getElementById('scanCamErr').classList.remove('show');
+  }catch(e){
+    document.getElementById('scanVideo').style.display='none';
+    document.getElementById('scanCaptureBtn').style.display='none';
+    document.getElementById('scanCamErr').classList.add('show');
+  }
+}
+function closeScanModal(){
+  document.getElementById('scanModal').classList.remove('open');
+  if(scanStream){scanStream.getTracks().forEach(t=>t.stop());scanStream=null;}
+  document.getElementById('scanVideo').srcObject=null;
+}
+function showScanStep(n){
+  for(let i=1;i<=3;i++){
+    const el=document.getElementById('scan-step-'+i);
+    if(el) el.style.display = (i===n)?'block':'none';
+  }
+}
+function captureImage(){
+  const v=document.getElementById('scanVideo');
+  const c=document.getElementById('scanCanvas');
+  c.width=v.videoWidth||640; c.height=v.videoHeight||480;
+  c.getContext('2d').drawImage(v,0,0,c.width,c.height);
+  scanImgData=c.toDataURL('image/png');
+  if(scanStream){scanStream.getTracks().forEach(t=>t.stop());scanStream=null;}
+  processImage(scanImgData);
+}
+function handleFileUpload(ev){
+  const f=ev.target.files[0]; if(!f)return;
+  const r=new FileReader();
+  r.onload=e=>{scanImgData=e.target.result;processImage(scanImgData);};
+  r.readAsDataURL(f);
+}
+async function processImage(imgData){
+  showScanStep(2);
+  const status=document.getElementById('scanStatus');
+  const fill=document.querySelector('#scanProg .fill');
+  if(status) status.textContent='Loading recognition engine…';
+  if(fill) fill.style.width='5%';
+  try{
+    if(typeof Tesseract==='undefined'){
+      for(let i=0;i<50 && typeof Tesseract==='undefined';i++) await new Promise(r=>setTimeout(r,100));
+      if(typeof Tesseract==='undefined') throw new Error('Tesseract.js could not load');
+    }
+    const worker = await Tesseract.createWorker('eng',1,{
+      logger:m=>{
+        if(m.status==='recognizing text'){
+          const p=Math.round(m.progress*100);
+          if(fill) fill.style.width=p+'%';
+          if(status) status.textContent='Reading text… '+p+'%';
+        } else if(m.status){
+          if(status) status.textContent=m.status;
+          if(fill) fill.style.width='30%';
+        }
+      }
+    });
+    const {data:{text}} = await worker.recognize(imgData);
+    await worker.terminate();
+    if(fill) fill.style.width='100%';
+    extractAndPopulate(text);
+  }catch(err){
+    console.warn('OCR error',err);
+    document.getElementById('scan-raw').textContent='OCR could not run ('+(err.message||err)+'). Please type the details manually.';
+    ['scan-name','scan-company','scan-email','scan-phone'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+    showScanStep(3);
+  }
+}
+function extractAndPopulate(rawText){
+  const lines = (rawText||'').split('\n').map(l=>l.trim()).filter(l=>l.length>1);
+  const emailMatch = rawText.match(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/);
+  const phoneMatch = rawText.match(/(?:\+?[\d][\d\s\-().]{7,17}[\d])/);
+  const webMatch = rawText.match(/(?:www\.)[^\s,]+|(?:https?:\/\/)[^\s,]+/i);
+  const isJunk = l => !l || l.length<2 || /^\d+$/.test(l) || (l.length<3 && !/^[A-Z]{2,}$/.test(l));
+  let companyLine = lines.find(l =>
+    /(Ltd|Limited|Inc\b|Corp|Corporation|S\.?A\.?|GmbH|plc|PLC|Group|Solutions|Energy|Water|Tech|Systems|Services|Consult|Advisory|International|Global|Holdings|Partners|Engineering|Construction|Contractors|AG|BV|N\.?V\.?|S\.?L\.?|S\.?p\.?A\.?|Co\.|LLC|LLP|Pty|Industries|Bank|Capital|Fund)/i.test(l)
+    && l.length>3 && l.length<90);
+  if(!companyLine && webMatch){
+    const host = webMatch[0].replace(/^https?:\/\//,'').replace(/^www\./,'').split('/')[0];
+    const stem = host.split('.')[0];
+    if(stem && stem.length>2) companyLine = stem.charAt(0).toUpperCase()+stem.slice(1);
+  }
+  let nameLine = lines.find(l => {
+    if(l===companyLine) return false;
+    if(emailMatch && l.includes(emailMatch[0])) return false;
+    return /^[A-ZÀ-Ÿ][a-zA-ZÀ-ÿ\-']{1,20}(\s[A-ZÀ-Ÿ][a-zA-ZÀ-ÿ\-']{1,20}){1,3}$/.test(l.trim());
+  });
+  if(!nameLine){
+    nameLine = lines.find(l => {
+      if(isJunk(l) || l===companyLine) return false;
+      if(emailMatch && l.includes(emailMatch[0])) return false;
+      if(phoneMatch && l.replace(/\s/g,'').includes(phoneMatch[0].replace(/\s/g,''))) return false;
+      if(webMatch && l.toLowerCase().includes(webMatch[0].toLowerCase())) return false;
+      const w = l.split(/\s+/);
+      return w.length>=1 && w.length<=5 && /[A-Za-z]{2,}/.test(l);
+    });
+  }
+  if(!nameLine && emailMatch){
+    const local = emailMatch[0].split('@')[0];
+    const parts = local.split(/[._\-]/).filter(p=>p.length>1 && /^[a-z]/i.test(p));
+    if(parts.length>=2) nameLine = parts.slice(0,3).map(p=>p.charAt(0).toUpperCase()+p.slice(1).toLowerCase()).join(' ');
+  }
+  document.getElementById('scan-name').value    = nameLine    || '';
+  document.getElementById('scan-company').value = companyLine || '';
+  document.getElementById('scan-email').value   = emailMatch  ? emailMatch[0] : '';
+  document.getElementById('scan-phone').value   = phoneMatch  ? phoneMatch[0].trim() : '';
+  document.getElementById('scan-raw').textContent = (rawText||'').trim() || '(no text recognised — try a clearer photo or fill manually)';
+  showScanStep(3);
+}
+function applyScanToForm(){
+  const name = document.getElementById('scan-name').value.trim();
+  const co   = document.getElementById('scan-company').value.trim();
+  const em   = document.getElementById('scan-email').value.trim();
+  const ph   = document.getElementById('scan-phone').value.trim();
+  const f = document.getElementById('contactForm');
+  if(f){
+    if(f.full_name && name) f.full_name.value = name;
+    if(f.company && co)     f.company.value = co;
+    if(f.email && em)       f.email.value = em;
+    if(f.phone && ph)       f.phone.value = ph;
+  }
+  closeScanModal();
+  setTimeout(()=>{document.getElementById('contact').scrollIntoView({behavior:'smooth',block:'center'});},200);
 }
 
 // Reveal animation — add pre-reveal only to off-screen elements
@@ -793,5 +1015,68 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
  });
 });
 </script>
+
+<!-- ═══════ BUSINESS CARD SCAN MODAL ═══════ -->
+<div id="scanModal" class="scan-modal">
+  <div class="scan-box">
+    <div class="scan-hdr">
+      <div>
+        <h4>Business Card Scanner</h4>
+        <p id="scanModalSubtitle">Point camera at a business card</p>
+      </div>
+      <button class="scan-close" onclick="closeScanModal()" aria-label="Close">×</button>
+    </div>
+
+    <div id="scan-step-1" class="scan-body" style="display:block">
+      <div class="scan-cam">
+        <video id="scanVideo" autoplay playsinline muted></video>
+        <div style="position:absolute;inset:12px;border:2px dashed rgba(212,168,67,.5);border-radius:6px;pointer-events:none"></div>
+        <div id="scanCamErr" class="scan-cam-err">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:8px;opacity:.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="4"/></svg>
+          <div style="font-size:.84rem">Camera not available</div>
+          <div style="font-size:.74rem">Upload an image below instead.</div>
+        </div>
+      </div>
+      <canvas id="scanCanvas"></canvas>
+      <div class="scan-row">
+        <button id="scanCaptureBtn" class="scan-btn scan-btn-primary" onclick="captureImage()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+          Capture
+        </button>
+        <label class="scan-btn scan-btn-secondary" style="cursor:pointer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          Upload
+          <input type="file" accept="image/*" onchange="handleFileUpload(event)" style="display:none">
+        </label>
+      </div>
+      <p style="font-size:.7rem;color:var(--grey);text-align:center;margin-top:10px">Hold steady and well-lit. Camera permission required for live capture.</p>
+    </div>
+
+    <div id="scan-step-2" class="scan-body" style="display:none;text-align:center;padding:32px 22px">
+      <div style="width:48px;height:48px;border-radius:50%;background:rgba(212,168,67,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 14px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" class="scan-spin"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+      </div>
+      <div id="scanStatus" style="font-size:.86rem;margin-bottom:10px">Reading card…</div>
+      <div id="scanProg" class="scan-progress-bar"><div class="fill"></div></div>
+    </div>
+
+    <div id="scan-step-3" class="scan-body" style="display:none">
+      <div class="scan-fields">
+        <div><label>Name</label><input id="scan-name" type="text" placeholder="Extracted name"></div>
+        <div><label>Company</label><input id="scan-company" type="text" placeholder="Extracted company"></div>
+        <div><label>Email</label><input id="scan-email" type="email" placeholder="Extracted email"></div>
+        <div><label>Phone</label><input id="scan-phone" type="text" placeholder="Extracted phone"></div>
+      </div>
+      <details style="margin-top:10px">
+        <summary style="font-size:.74rem;color:var(--grey);cursor:pointer">Show raw OCR text</summary>
+        <div id="scan-raw"></div>
+      </details>
+      <div class="scan-row" style="margin-top:14px">
+        <button class="scan-btn scan-btn-secondary" onclick="showScanStep(1);openScanModal()">Scan again</button>
+        <button class="scan-btn scan-btn-primary" onclick="applyScanToForm()">Use these details</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
