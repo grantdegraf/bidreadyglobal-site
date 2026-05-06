@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="alternate" hreflang="en" href="https://bidreadyglobal.com/" />
+<link rel="alternate" hreflang="fr" href="https://bidreadyglobal.com/?lang=fr" />
+<link rel="alternate" hreflang="de" href="https://bidreadyglobal.com/?lang=de" />
+<link rel="alternate" hreflang="x-default" href="https://bidreadyglobal.com/" />
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>BidReady Global | Advanced Tender Intelligence &amp; Compliance Screening</title>
@@ -290,7 +294,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
 
 <!-- Tesseract.js for business-card OCR (deferred, ~5MB on demand) -->
 <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.1.1/tesseract.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/5.1.1/tesseract.min.js"></script>
 
 <style>
   /* Scan modal */
@@ -359,7 +363,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
     <a href="https://app.bidreadyglobal.com" class="btn btn-outline btn-sm live-cta" target="_blank" rel="noopener" aria-label="Try BidReady Radar Live (opens in new tab)">
      <span class="live-dot" aria-hidden="true"></span>Try BidReady Radar Live
     </a>
-    <a href="#contact" class="btn btn-primary btn-sm">Request a Review</a>
+    <span data-lang-mount style="display:inline-flex;align-items:center;margin-right:10px;"></span><a href="#contact" class="btn btn-primary btn-sm" data-i18n="hero.cta_primary">Request a Review</a>
     <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" onclick="(function(b){var n=document.getElementById('navLinks');var o=n.classList.toggle('open');b.classList.toggle('open',o);b.setAttribute('aria-expanded',o);})(this)">
      <span></span><span></span><span></span>
     </button>
@@ -709,7 +713,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
  <div class="container">
   <div class="contact-inner">
    <div class="reveal">
-    <div class="label">Request a Review</div>
+    <div class="label" data-i18n="hero.cta_primary">Request a Review</div>
     <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:12px">Provide the details below.</h2>
     <p>We will respond within one business day to confirm scope, timeline, and next steps.</p>
     <p style="margin-top:16px;font-size:.84rem">You can also reach us directly at <a href="mailto:info@bidreadyglobal.com" style="color:var(--green)">info@bidreadyglobal.com</a>. We respond to all enquiries within one business day.</p>
@@ -763,7 +767,7 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
       </div>
       <div class="form-field full"><label>Additional Notes</label><textarea name="message" placeholder="Any context that will help us scope the engagement"></textarea></div>
      </div>
-     <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:13px">Submit Review Request</button>
+     <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:13px" data-i18n="contact.submit">Submit Review Request</button>
     </form>
     <div id="form-success" style="display:none;text-align:center;padding:32px 0">
      <div style="width:52px;height:52px;border-radius:50%;background:rgba(34,169,106,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 14px">
@@ -809,6 +813,13 @@ footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:40p
    <span>info@bidreadyglobal.com</span>
   </div>
  </div>
+<!-- Social media icons -->
+<div class="social-icons" style="display:flex;gap:14px;justify-content:center;margin:18px 0;">
+  <a href="https://www.linkedin.com/company/bidready-global" target="_blank" rel="noopener" aria-label="LinkedIn" data-i18n-aria-label="footer.social_linkedin" style="color:var(--grey,#8b95a4);transition:color .2s;" onmouseover="this.style.color='var(--gold,#d4a843)'" onmouseout="this.style.color='var(--grey,#8b95a4)'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+  <a href="https://x.com/BidReadyGlobal" target="_blank" rel="noopener" aria-label="X (Twitter)" style="color:var(--grey,#8b95a4);transition:color .2s;" onmouseover="this.style.color='var(--gold,#d4a843)'" onmouseout="this.style.color='var(--grey,#8b95a4)'"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+  <a href="https://www.facebook.com/BidReadyGlobal" target="_blank" rel="noopener" aria-label="Facebook" style="color:var(--grey,#8b95a4);transition:color .2s;" onmouseover="this.style.color='var(--gold,#d4a843)'" onmouseout="this.style.color='var(--grey,#8b95a4)'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+  <a href="https://www.youtube.com/@BidReadyGlobal" target="_blank" rel="noopener" aria-label="YouTube" style="color:var(--grey,#8b95a4);transition:color .2s;" onmouseover="this.style.color='var(--gold,#d4a843)'" onmouseout="this.style.color='var(--grey,#8b95a4)'"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+</div>
 </footer>
 
 <script>
@@ -851,143 +862,7 @@ async function handleSubmit(e){
  }
 }
 
-// ─── BUSINESS CARD SCANNER ─────────────────────────────────────────────
-let scanStream = null;
-let scanImgData = null;
-
-async function openScanModal(){
-  const modal = document.getElementById('scanModal');
-  modal.classList.add('open');
-  showScanStep(1);
-  try{
-    scanStream = await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'},width:{ideal:1280},height:{ideal:720}}});
-    const v = document.getElementById('scanVideo');
-    v.srcObject = scanStream;
-    v.style.display='block';
-    document.getElementById('scanCaptureBtn').style.display='flex';
-    document.getElementById('scanCamErr').classList.remove('show');
-  }catch(e){
-    document.getElementById('scanVideo').style.display='none';
-    document.getElementById('scanCaptureBtn').style.display='none';
-    document.getElementById('scanCamErr').classList.add('show');
-  }
-}
-function closeScanModal(){
-  document.getElementById('scanModal').classList.remove('open');
-  if(scanStream){scanStream.getTracks().forEach(t=>t.stop());scanStream=null;}
-  document.getElementById('scanVideo').srcObject=null;
-}
-function showScanStep(n){
-  for(let i=1;i<=3;i++){
-    const el=document.getElementById('scan-step-'+i);
-    if(el) el.style.display = (i===n)?'block':'none';
-  }
-}
-function captureImage(){
-  const v=document.getElementById('scanVideo');
-  const c=document.getElementById('scanCanvas');
-  c.width=v.videoWidth||640; c.height=v.videoHeight||480;
-  c.getContext('2d').drawImage(v,0,0,c.width,c.height);
-  scanImgData=c.toDataURL('image/png');
-  if(scanStream){scanStream.getTracks().forEach(t=>t.stop());scanStream=null;}
-  processImage(scanImgData);
-}
-function handleFileUpload(ev){
-  const f=ev.target.files[0]; if(!f)return;
-  const r=new FileReader();
-  r.onload=e=>{scanImgData=e.target.result;processImage(scanImgData);};
-  r.readAsDataURL(f);
-}
-async function processImage(imgData){
-  showScanStep(2);
-  const status=document.getElementById('scanStatus');
-  const fill=document.querySelector('#scanProg .fill');
-  if(status) status.textContent='Loading recognition engine…';
-  if(fill) fill.style.width='5%';
-  try{
-    if(typeof Tesseract==='undefined'){
-      for(let i=0;i<50 && typeof Tesseract==='undefined';i++) await new Promise(r=>setTimeout(r,100));
-      if(typeof Tesseract==='undefined') throw new Error('Tesseract.js could not load');
-    }
-    const worker = await Tesseract.createWorker('eng',1,{
-      logger:m=>{
-        if(m.status==='recognizing text'){
-          const p=Math.round(m.progress*100);
-          if(fill) fill.style.width=p+'%';
-          if(status) status.textContent='Reading text… '+p+'%';
-        } else if(m.status){
-          if(status) status.textContent=m.status;
-          if(fill) fill.style.width='30%';
-        }
-      }
-    });
-    const {data:{text}} = await worker.recognize(imgData);
-    await worker.terminate();
-    if(fill) fill.style.width='100%';
-    extractAndPopulate(text);
-  }catch(err){
-    console.warn('OCR error',err);
-    document.getElementById('scan-raw').textContent='OCR could not run ('+(err.message||err)+'). Please type the details manually.';
-    ['scan-name','scan-company','scan-email','scan-phone'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-    showScanStep(3);
-  }
-}
-function extractAndPopulate(rawText){
-  const lines = (rawText||'').split('\n').map(l=>l.trim()).filter(l=>l.length>1);
-  const emailMatch = rawText.match(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/);
-  const phoneMatch = rawText.match(/(?:\+?[\d][\d\s\-().]{7,17}[\d])/);
-  const webMatch = rawText.match(/(?:www\.)[^\s,]+|(?:https?:\/\/)[^\s,]+/i);
-  const isJunk = l => !l || l.length<2 || /^\d+$/.test(l) || (l.length<3 && !/^[A-Z]{2,}$/.test(l));
-  let companyLine = lines.find(l =>
-    /(Ltd|Limited|Inc\b|Corp|Corporation|S\.?A\.?|GmbH|plc|PLC|Group|Solutions|Energy|Water|Tech|Systems|Services|Consult|Advisory|International|Global|Holdings|Partners|Engineering|Construction|Contractors|AG|BV|N\.?V\.?|S\.?L\.?|S\.?p\.?A\.?|Co\.|LLC|LLP|Pty|Industries|Bank|Capital|Fund)/i.test(l)
-    && l.length>3 && l.length<90);
-  if(!companyLine && webMatch){
-    const host = webMatch[0].replace(/^https?:\/\//,'').replace(/^www\./,'').split('/')[0];
-    const stem = host.split('.')[0];
-    if(stem && stem.length>2) companyLine = stem.charAt(0).toUpperCase()+stem.slice(1);
-  }
-  let nameLine = lines.find(l => {
-    if(l===companyLine) return false;
-    if(emailMatch && l.includes(emailMatch[0])) return false;
-    return /^[A-ZÀ-Ÿ][a-zA-ZÀ-ÿ\-']{1,20}(\s[A-ZÀ-Ÿ][a-zA-ZÀ-ÿ\-']{1,20}){1,3}$/.test(l.trim());
-  });
-  if(!nameLine){
-    nameLine = lines.find(l => {
-      if(isJunk(l) || l===companyLine) return false;
-      if(emailMatch && l.includes(emailMatch[0])) return false;
-      if(phoneMatch && l.replace(/\s/g,'').includes(phoneMatch[0].replace(/\s/g,''))) return false;
-      if(webMatch && l.toLowerCase().includes(webMatch[0].toLowerCase())) return false;
-      const w = l.split(/\s+/);
-      return w.length>=1 && w.length<=5 && /[A-Za-z]{2,}/.test(l);
-    });
-  }
-  if(!nameLine && emailMatch){
-    const local = emailMatch[0].split('@')[0];
-    const parts = local.split(/[._\-]/).filter(p=>p.length>1 && /^[a-z]/i.test(p));
-    if(parts.length>=2) nameLine = parts.slice(0,3).map(p=>p.charAt(0).toUpperCase()+p.slice(1).toLowerCase()).join(' ');
-  }
-  document.getElementById('scan-name').value    = nameLine    || '';
-  document.getElementById('scan-company').value = companyLine || '';
-  document.getElementById('scan-email').value   = emailMatch  ? emailMatch[0] : '';
-  document.getElementById('scan-phone').value   = phoneMatch  ? phoneMatch[0].trim() : '';
-  document.getElementById('scan-raw').textContent = (rawText||'').trim() || '(no text recognised — try a clearer photo or fill manually)';
-  showScanStep(3);
-}
-function applyScanToForm(){
-  const name = document.getElementById('scan-name').value.trim();
-  const co   = document.getElementById('scan-company').value.trim();
-  const em   = document.getElementById('scan-email').value.trim();
-  const ph   = document.getElementById('scan-phone').value.trim();
-  const f = document.getElementById('contactForm');
-  if(f){
-    if(f.full_name && name) f.full_name.value = name;
-    if(f.company && co)     f.company.value = co;
-    if(f.email && em)       f.email.value = em;
-    if(f.phone && ph)       f.phone.value = ph;
-  }
-  closeScanModal();
-  setTimeout(()=>{document.getElementById('contact').scrollIntoView({behavior:'smooth',block:'center'});},200);
-}
+// Old scanner block removed — replaced by external scanner v2 below.
 
 // Reveal animation — add pre-reveal only to off-screen elements
 const io=new IntersectionObserver(entries=>{
@@ -1021,8 +896,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   <div class="scan-box">
     <div class="scan-hdr">
       <div>
-        <h4>Business Card Scanner</h4>
-        <p id="scanModalSubtitle">Point camera at a business card</p>
+        <h4 data-i18n="scanner.title">Business Card Scanner</h4>
+        <p id="scanModalSubtitle" data-i18n="scanner.subtitle_initial">Point camera at a business card</p>
       </div>
       <button class="scan-close" onclick="closeScanModal()" aria-label="Close">×</button>
     </div>
@@ -1033,8 +908,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
         <div style="position:absolute;inset:12px;border:2px dashed rgba(212,168,67,.5);border-radius:6px;pointer-events:none"></div>
         <div id="scanCamErr" class="scan-cam-err">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:8px;opacity:.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="4"/></svg>
-          <div style="font-size:.84rem">Camera not available</div>
-          <div style="font-size:.74rem">Upload an image below instead.</div>
+          <div style="font-size:.84rem" data-i18n="scanner.cam_unavailable">Camera not available</div>
+          <div style="font-size:.74rem" data-i18n="scanner.cam_unavailable_sub">Upload an image below instead.</div>
         </div>
       </div>
       <canvas id="scanCanvas"></canvas>
@@ -1049,7 +924,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
           <input type="file" accept="image/*" onchange="handleFileUpload(event)" style="display:none">
         </label>
       </div>
-      <p style="font-size:.7rem;color:var(--grey);text-align:center;margin-top:10px">Hold steady and well-lit. Camera permission required for live capture.</p>
+      <p style="font-size:.7rem;color:var(--grey);text-align:center;margin-top:10px" data-i18n="scanner.permission_help">Hold steady and well-lit. Camera permission required for live capture.</p>
     </div>
 
     <div id="scan-step-2" class="scan-body" style="display:none;text-align:center;padding:32px 22px">
@@ -1068,15 +943,617 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
         <div><label>Phone</label><input id="scan-phone" type="text" placeholder="Extracted phone"></div>
       </div>
       <details style="margin-top:10px">
-        <summary style="font-size:.74rem;color:var(--grey);cursor:pointer">Show raw OCR text</summary>
+        <summary style="font-size:.74rem;color:var(--grey);cursor:pointer" data-i18n="scanner.raw_toggle">Show raw OCR text</summary>
         <div id="scan-raw"></div>
       </details>
       <div class="scan-row" style="margin-top:14px">
-        <button class="scan-btn scan-btn-secondary" onclick="showScanStep(1);openScanModal()">Scan again</button>
-        <button class="scan-btn scan-btn-primary" onclick="applyScanToForm()">Use these details</button>
+        <button class="scan-btn scan-btn-secondary" onclick="showScanStep(1);openScanModal()" data-i18n="scanner.btn_scan_again">Scan again</button>
+        <button class="scan-btn scan-btn-primary" onclick="applyScanToForm()" data-i18n="scanner.btn_use_details">Use these details</button>
       </div>
     </div>
   </div>
 </div>
+<!-- BidReady scanner v2 (Tesseract.js 5.1.1, fixes SetImageFile-of-null) -->
+<script>
+// ═══════════════════════════════════════════════════════════════════════════
+// BidReady — Robust Business-Card Scanner (drop-in replacement)
+// ═══════════════════════════════════════════════════════════════════════════
+// Fixes "Cannot read properties of null (reading 'SetImageFile')" by:
+//   1. Using Tesseract.js 5.1.1 (createWorker is await-safe, no init races)
+//   2. Pinning worker/core/lang paths explicitly (no jsdelivr default flakiness)
+//   3. Two-step init pattern: load + initialize before recognize
+//   4. Image preprocessing: grayscale + 2x scale → much higher OCR quality
+//   5. cacheMethod:'none' — avoids IndexedDB issues on iOS Safari private mode
+//   6. Concrete user-facing error messages instead of silent failures
+// ═══════════════════════════════════════════════════════════════════════════
+
+// SCRIPT TAG (replaces the old tesseract.js 4.1.1 tag):
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/5.1.1/tesseract.min.js"><\/script>
+
+(function () {
+  'use strict';
+
+  // ─── Config ──────────────────────────────────────────────────────────────
+  const TESS_OPTS = {
+    workerPath: 'https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/worker.min.js',
+    corePath:   'https://cdn.jsdelivr.net/npm/tesseract.js-core@5.1.1',
+    langPath:   'https://tessdata.projectnaptha.com/4.0.0',
+    cacheMethod: 'none',
+    workerBlobURL: false
+  };
+
+  // ─── State ───────────────────────────────────────────────────────────────
+  let scanStream  = null;
+  let scanImgData = null;
+  let cachedWorker = null;     // reuse worker across scans (warm cache)
+
+  // ─── Utility: image preprocessing for better OCR ─────────────────────────
+  function preprocessImage(dataUrl) {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => {
+        // Scale up small images (better for low-res phone captures)
+        const targetW = Math.max(1200, img.width);
+        const scale = targetW / img.width;
+        const w = Math.round(img.width * scale);
+        const h = Math.round(img.height * scale);
+
+        const canvas = document.createElement('canvas');
+        canvas.width = w;
+        canvas.height = h;
+        const ctx = canvas.getContext('2d');
+
+        // High-quality scaling
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
+        ctx.drawImage(img, 0, 0, w, h);
+
+        // Convert to grayscale + boost contrast — improves OCR on coloured cards
+        try {
+          const imgData = ctx.getImageData(0, 0, w, h);
+          const d = imgData.data;
+          for (let i = 0; i < d.length; i += 4) {
+            // Standard luminance: 0.299R + 0.587G + 0.114B
+            const lum = d[i] * 0.299 + d[i+1] * 0.587 + d[i+2] * 0.114;
+            // Soft contrast boost (sigmoidal-ish)
+            const boosted = lum < 128
+              ? Math.max(0, lum * 0.85)
+              : Math.min(255, 60 + lum * 1.05);
+            d[i] = d[i+1] = d[i+2] = boosted;
+          }
+          ctx.putImageData(imgData, 0, 0);
+        } catch (e) {
+          // tainted canvas (cross-origin) — fall back to original
+          console.warn('[scanner] preprocess skipped:', e.message);
+        }
+
+        resolve(canvas.toDataURL('image/jpeg', 0.92));
+      };
+      img.onerror = () => resolve(dataUrl); // fallback to original
+      img.src = dataUrl;
+    });
+  }
+
+  // ─── Tesseract worker getter (lazy + cached) ─────────────────────────────
+  async function getWorker(progressCb) {
+    if (cachedWorker) return cachedWorker;
+
+    if (typeof Tesseract === 'undefined') {
+      // Wait up to 8s for the script tag to load
+      for (let i = 0; i < 80 && typeof Tesseract === 'undefined'; i++) {
+        await new Promise(r => setTimeout(r, 100));
+      }
+      if (typeof Tesseract === 'undefined') {
+        throw new Error('Tesseract.js failed to load. Check your internet connection or disable any ad blocker for bidreadyglobal.com.');
+      }
+    }
+
+    // Tesseract.js 5.x: createWorker fully awaits load + initialize internally
+    // when called as createWorker(lang, oem, options). This avoids the v4
+    // init race that produced the "SetImageFile of null" error.
+    const worker = await Tesseract.createWorker('eng', 1, {
+      ...TESS_OPTS,
+      logger: progressCb || (() => {})
+    });
+
+    cachedWorker = worker;
+    return worker;
+  }
+
+  // ─── Modal open/close ────────────────────────────────────────────────────
+  async function openScanModal() {
+    const modal = document.getElementById('scanModal');
+    if (!modal) return;
+
+    // Display: support both class-based (.open) and inline (.style.display) modal styles
+    if (modal.classList.contains('scan-modal')) modal.classList.add('open');
+    else modal.style.display = 'flex';
+
+    showScanStep(1);
+
+    const sub = document.getElementById('scanModalSubtitle');
+    if (sub) sub.textContent = 'Point camera at a business card';
+
+    // Try camera; fail gracefully to upload-only mode
+    try {
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        throw new Error('Camera API not supported on this browser');
+      }
+      scanStream = await navigator.mediaDevices.getUserMedia({
+        video: {
+          facingMode: { ideal: 'environment' },
+          width:  { ideal: 1280 },
+          height: { ideal: 720 }
+        }
+      });
+      const video = document.getElementById('scanVideo');
+      if (video) {
+        video.srcObject = scanStream;
+        video.style.display = 'block';
+      }
+      const cap = document.getElementById('scanCaptureBtn') || document.getElementById('captureBtn');
+      if (cap) cap.style.display = 'flex';
+      const errEl = document.getElementById('scanCamErr') || document.getElementById('scanCameraError');
+      if (errEl) {
+        errEl.classList.remove('show');
+        errEl.style.display = 'none';
+      }
+    } catch (e) {
+      console.warn('[scanner] camera unavailable:', e.message);
+      const v = document.getElementById('scanVideo');
+      if (v) v.style.display = 'none';
+      const cap = document.getElementById('scanCaptureBtn') || document.getElementById('captureBtn');
+      if (cap) cap.style.display = 'none';
+      const errEl = document.getElementById('scanCamErr') || document.getElementById('scanCameraError');
+      if (errEl) {
+        errEl.classList.add('show');
+        errEl.style.display = 'flex';
+      }
+    }
+
+    // Pre-warm Tesseract in the background while user frames the card
+    getWorker().catch(e => console.warn('[scanner] preload failed:', e.message));
+  }
+
+  function closeScanModal() {
+    const modal = document.getElementById('scanModal');
+    if (!modal) return;
+    if (modal.classList.contains('scan-modal')) modal.classList.remove('open');
+    else modal.style.display = 'none';
+    if (scanStream) {
+      scanStream.getTracks().forEach(t => t.stop());
+      scanStream = null;
+    }
+    const v = document.getElementById('scanVideo');
+    if (v) v.srcObject = null;
+  }
+
+  function showScanStep(n) {
+    for (let i = 1; i <= 3; i++) {
+      const el = document.getElementById('scan-step-' + i);
+      if (el) el.style.display = (i === n) ? 'block' : 'none';
+    }
+  }
+
+  function resetScanner() {
+    showScanStep(1);
+    if (!scanStream) openScanModal();
+  }
+
+  // ─── Capture from camera ─────────────────────────────────────────────────
+  function captureImage() {
+    const v = document.getElementById('scanVideo');
+    const c = document.getElementById('scanCanvas');
+    if (!v || !c) return;
+    c.width  = v.videoWidth  || 1280;
+    c.height = v.videoHeight || 720;
+    c.getContext('2d').drawImage(v, 0, 0, c.width, c.height);
+    scanImgData = c.toDataURL('image/jpeg', 0.95);
+    if (scanStream) {
+      scanStream.getTracks().forEach(t => t.stop());
+      scanStream = null;
+    }
+    processImage(scanImgData);
+  }
+
+  // ─── Upload from file ────────────────────────────────────────────────────
+  function handleFileUpload(ev) {
+    const f = ev.target.files && ev.target.files[0];
+    if (!f) return;
+    const r = new FileReader();
+    r.onload = e => {
+      scanImgData = e.target.result;
+      processImage(scanImgData);
+    };
+    r.readAsDataURL(f);
+  }
+
+  // ─── Run OCR ─────────────────────────────────────────────────────────────
+  async function processImage(imgData) {
+    showScanStep(2);
+
+    const setStatus = (txt) => {
+      const el = document.getElementById('scanStatus') || document.getElementById('scanStatusText');
+      if (el) el.textContent = txt;
+    };
+    const setProg = (pct) => {
+      const fill = document.querySelector('#scanProg .fill') || document.getElementById('scanProgress');
+      if (fill) fill.style.width = pct + '%';
+    };
+    const setPreview = (src) => {
+      const p = document.getElementById('scanPreview');
+      if (p) { p.src = src; p.style.display = 'block'; }
+    };
+
+    setPreview(imgData);
+    setStatus('Enhancing image…');
+    setProg(8);
+
+    try {
+      // Preprocess for better OCR
+      const processed = await preprocessImage(imgData);
+      setStatus('Loading recognition engine…');
+      setProg(20);
+
+      const worker = await getWorker(m => {
+        if (m.status === 'recognizing text') {
+          const p = 30 + Math.round(m.progress * 65);
+          setProg(p);
+          setStatus('Reading text… ' + Math.round(m.progress * 100) + '%');
+        } else if (m.status) {
+          setStatus(m.status.charAt(0).toUpperCase() + m.status.slice(1));
+        }
+      });
+
+      const { data: { text } } = await worker.recognize(processed);
+      setProg(100);
+
+      const sub = document.getElementById('scanModalSubtitle');
+      if (sub) sub.textContent = 'Verify the extracted details';
+      extractAndPopulate(text);
+
+    } catch (err) {
+      console.error('[scanner] OCR error:', err);
+      const raw = document.getElementById('scan-raw');
+      if (raw) {
+        raw.textContent = 'OCR could not run: ' + (err.message || err) +
+          '. Please type the details manually below.';
+      }
+      ['scan-name','scan-title','scan-company','scan-email','scan-phone','scan-website']
+        .forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+      showScanStep(3);
+    }
+  }
+
+  // ─── Field extraction (smart parsing) ────────────────────────────────────
+  function extractAndPopulate(rawText) {
+    const lines = (rawText || '').split('\n').map(l => l.trim()).filter(l => l.length > 1);
+
+    const emailMatch = rawText.match(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/);
+    const phoneMatch = rawText.match(/(?:\+?[\d][\d\s\-().]{7,17}[\d])/);
+    const webMatch   = rawText.match(/(?:www\.)[^\s,]+|(?:https?:\/\/)[^\s,]+/i);
+
+    const isJunk = l => !l || l.length < 2 || /^\d+$/.test(l) ||
+      (l.length < 3 && !/^[A-Z]{2,}$/.test(l));
+
+    // Title
+    const titleLine = lines.find(l =>
+      /(Director|Manager|CEO|CFO|COO|CTO|CIO|CMO|CRO|President|VP|Vice[ -]?President|Partner|Founder|Owner|Engineer|Analyst|Consultant|Head[ -]?of|Head\b|Officer|Specialist|Advisor|Adviser|Executive|Representative|Associate|Lead|Sales|Marketing|Operations|Procurement|Business Development|BD|Technical|Project|Account|Senior|Principal|Chief|Counsel|Legal|HR|Finance|Strategy)/i.test(l)
+      && l.length > 3 && l.length < 90
+    );
+
+    // Company
+    let companyLine = lines.find(l =>
+      /(Ltd|Limited|Inc\b|Corp|Corporation|S\.?A\.?|GmbH|plc|PLC|Group|Solutions|Energy|Water|Tech|Systems|Services|Consult|Advisory|International|Global|Holdings|Partners|Engineering|Construction|Contractors|AG|BV|N\.?V\.?|S\.?L\.?|S\.?p\.?A\.?|Co\.|LLC|LLP|Pty|Industries|Bank|Capital|Fund|Technologies|Veolia|Siemens|Suez|EDF|Engie|Acwa)/i.test(l)
+      && l.length > 3 && l.length < 90
+    );
+    if (!companyLine && webMatch) {
+      const host = webMatch[0].replace(/^https?:\/\//,'').replace(/^www\./,'').split('/')[0];
+      const stem = host.split('.')[0];
+      if (stem && stem.length > 2) {
+        companyLine = stem.charAt(0).toUpperCase() + stem.slice(1);
+      }
+    }
+
+    // Name
+    let nameLine = lines.find(l => {
+      if (l === companyLine || l === titleLine) return false;
+      if (emailMatch && l.includes(emailMatch[0])) return false;
+      return /^[A-ZÀ-Ÿ][a-zA-ZÀ-ÿ\-']{1,20}(\s[A-ZÀ-Ÿ][a-zA-ZÀ-ÿ\-']{1,20}){1,3}$/.test(l.trim());
+    });
+    if (!nameLine) {
+      nameLine = lines.find(l => {
+        if (isJunk(l) || l === companyLine || l === titleLine) return false;
+        if (emailMatch && l.includes(emailMatch[0])) return false;
+        if (phoneMatch && l.replace(/\s/g,'').includes(phoneMatch[0].replace(/\s/g,''))) return false;
+        if (webMatch && l.toLowerCase().includes(webMatch[0].toLowerCase())) return false;
+        const w = l.split(/\s+/);
+        return w.length >= 1 && w.length <= 5 && /[A-Za-z]{2,}/.test(l);
+      });
+    }
+    if (!nameLine && emailMatch) {
+      const local = emailMatch[0].split('@')[0];
+      const parts = local.split(/[._\-]/).filter(p => p.length > 1 && /^[a-z]/i.test(p));
+      if (parts.length >= 2) {
+        nameLine = parts.slice(0, 3)
+          .map(p => p.charAt(0).toUpperCase() + p.slice(1).toLowerCase())
+          .join(' ');
+      }
+    }
+
+    const setVal = (id, v) => { const el = document.getElementById(id); if (el) el.value = v || ''; };
+    setVal('scan-name',    nameLine);
+    setVal('scan-title',   titleLine);
+    setVal('scan-company', companyLine);
+    setVal('scan-email',   emailMatch ? emailMatch[0] : '');
+    setVal('scan-phone',   phoneMatch ? phoneMatch[0].trim() : '');
+    setVal('scan-website', webMatch  ? webMatch[0]  : '');
+
+    const raw = document.getElementById('scan-raw');
+    if (raw) {
+      raw.textContent = (rawText && rawText.trim())
+        ? rawText
+        : '(no text recognised — try a clearer photo or fill the fields manually below)';
+    }
+
+    const filled = [nameLine, companyLine, emailMatch && emailMatch[0], phoneMatch && phoneMatch[0]].filter(Boolean).length;
+    const sub = document.getElementById('scanModalSubtitle');
+    if (sub) {
+      sub.textContent = filled === 0
+        ? 'OCR ran but no fields auto-filled — copy from raw text below or type manually'
+        : (filled < 2
+          ? 'Some fields filled — review and complete missing ones'
+          : 'Verify the extracted details');
+    }
+
+    showScanStep(3);
+  }
+
+  // ─── Apply scan results to the contact form ──────────────────────────────
+  function applyScanToForm() {
+    const name = (document.getElementById('scan-name')    || {}).value || '';
+    const co   = (document.getElementById('scan-company') || {}).value || '';
+    const em   = (document.getElementById('scan-email')   || {}).value || '';
+    const ph   = (document.getElementById('scan-phone')   || {}).value || '';
+
+    const f = document.getElementById('contactForm');
+    if (f) {
+      // Marketing site uses named inputs
+      if (f.full_name && name) f.full_name.value = name;
+      if (f.company   && co)   f.company.value   = co;
+      if (f.email     && em)   f.email.value     = em;
+      if (f.phone     && ph)   f.phone.value     = ph;
+
+      // App site uses placeholder-based mapping
+      f.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]').forEach(inp => {
+        const ph_ = (inp.placeholder || '').toLowerCase();
+        if (ph_.includes('name')    && !inp.value) inp.value = name;
+        if (ph_.includes('company') && !inp.value) inp.value = co;
+        if (inp.type === 'email'    && !inp.value) inp.value = em;
+        if (inp.type === 'tel'      && !inp.value) inp.value = ph;
+      });
+    }
+
+    closeScanModal();
+    setTimeout(() => {
+      const t = document.getElementById('contact');
+      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 200);
+  }
+
+  // ─── Public API (overrides the old globals) ──────────────────────────────
+  window.openScanModal    = openScanModal;
+  window.closeScanModal   = closeScanModal;
+  window.showScanStep     = showScanStep;
+  window.captureImage     = captureImage;
+  window.handleFileUpload = handleFileUpload;
+  window.processImage     = processImage;
+  window.applyScanToForm  = applyScanToForm;
+  window.fillFormFromScan = applyScanToForm;  // app site name
+  window.resetScanner     = resetScanner;
+  window.loadTesseract    = () => Promise.resolve(window.Tesseract);  // legacy shim
+
+  console.log('[scanner] BidReady scanner v2 ready (Tesseract.js 5.1.1, preprocessing enabled)');
+})();
+
+</script>
+<!-- BidReady i18n runtime (EN/FR/DE) -->
+<script>
+// ═══════════════════════════════════════════════════════════════════════════
+// BidReady — Runtime i18n (EN / FR / DE)
+// ═══════════════════════════════════════════════════════════════════════════
+// Usage:
+//   1. Include this script before </body>: <script src="/i18n-runtime.js"><\/script>
+//   2. Make sure /i18n-fr.json and /i18n-de.json are reachable at the site root
+//   3. Tag any translatable element with data-i18n="dot.path" (e.g. data-i18n="hero.cta_primary")
+//      For placeholders: data-i18n-placeholder="contact.field_name_ph"
+//      For attribute targets: data-i18n-attr="aria-label:nav.client_login"
+//   4. The language switcher (.lang-switcher) renders automatically into [data-lang-mount]
+//
+// Language detection priority:
+//   1. URL ?lang=fr  /  ?lang=de
+//   2. localStorage.bidready_lang
+//   3. <html lang="..">  (only if matches one of en/fr/de)
+//   4. navigator.language (first 2 chars)
+//   5. fallback: 'en'
+// ═══════════════════════════════════════════════════════════════════════════
+
+(function () {
+  'use strict';
+
+  const SUPPORTED = ['en', 'fr', 'de'];
+  const LABELS = { en: 'EN', fr: 'FR', de: 'DE' };
+  const FULL_LABELS = { en: 'English', fr: 'Français', de: 'Deutsch' };
+
+  // ─── Detect language ────────────────────────────────────────────────────
+  function detectLang() {
+    const params = new URLSearchParams(location.search);
+    const fromUrl = params.get('lang');
+    if (fromUrl && SUPPORTED.includes(fromUrl)) return fromUrl;
+
+    try {
+      const stored = localStorage.getItem('bidready_lang');
+      if (stored && SUPPORTED.includes(stored)) return stored;
+    } catch (_) {}
+
+    const htmlLang = (document.documentElement.lang || '').slice(0, 2);
+    if (SUPPORTED.includes(htmlLang)) return htmlLang;
+
+    const navLang = (navigator.language || 'en').slice(0, 2);
+    if (SUPPORTED.includes(navLang)) return navLang;
+
+    return 'en';
+  }
+
+  // ─── Resolve dot-path against translation tree ──────────────────────────
+  function resolve(tree, path) {
+    if (!path) return null;
+    let node = tree;
+    for (const part of path.split('.')) {
+      if (node == null) return null;
+      node = node[part];
+    }
+    return (typeof node === 'string') ? node : null;
+  }
+
+  // ─── Walk DOM and translate ─────────────────────────────────────────────
+  function applyTranslations(tree) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const v = resolve(tree, el.getAttribute('data-i18n'));
+      if (v != null) el.textContent = v;
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const v = resolve(tree, el.getAttribute('data-i18n-html'));
+      if (v != null) el.innerHTML = v;
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const v = resolve(tree, el.getAttribute('data-i18n-placeholder'));
+      if (v != null) el.setAttribute('placeholder', v);
+    });
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+      const v = resolve(tree, el.getAttribute('data-i18n-aria-label'));
+      if (v != null) el.setAttribute('aria-label', v);
+    });
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const v = resolve(tree, el.getAttribute('data-i18n-title'));
+      if (v != null) el.setAttribute('title', v);
+    });
+  }
+
+  // ─── Render language switcher ───────────────────────────────────────────
+  function renderSwitcher(activeLang) {
+    const mount = document.querySelector('[data-lang-mount]');
+    if (!mount) return;
+
+    mount.innerHTML = '';
+    const wrap = document.createElement('div');
+    wrap.className = 'lang-switcher';
+    wrap.setAttribute('role', 'group');
+    wrap.setAttribute('aria-label', 'Language selector');
+
+    SUPPORTED.forEach(code => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'lang-btn' + (code === activeLang ? ' active' : '');
+      btn.textContent = LABELS[code];
+      btn.setAttribute('aria-label', FULL_LABELS[code]);
+      btn.setAttribute('data-lang', code);
+      btn.addEventListener('click', () => setLang(code));
+      wrap.appendChild(btn);
+    });
+
+    mount.appendChild(wrap);
+  }
+
+  // ─── Inject CSS ─────────────────────────────────────────────────────────
+  function injectStyles() {
+    if (document.getElementById('i18n-styles')) return;
+    const css = `
+      .lang-switcher { display:inline-flex; gap:2px; border:1px solid var(--border, rgba(212,168,67,.25)); border-radius:6px; padding:2px; background:rgba(255,255,255,.02); }
+      .lang-btn { background:none; border:none; padding:5px 10px; font-size:.72rem; font-weight:700; letter-spacing:.5px; color:var(--grey, #8b95a4); cursor:pointer; border-radius:4px; transition:all .18s; font-family:inherit; }
+      .lang-btn:hover { color:var(--gold, #d4a843); background:rgba(212,168,67,.06); }
+      .lang-btn.active { color:var(--navy, #050C18); background:var(--gold, #d4a843); }
+      @media (max-width: 720px) { .lang-switcher { margin: 8px 0; } }
+    `;
+    const tag = document.createElement('style');
+    tag.id = 'i18n-styles';
+    tag.textContent = css;
+    document.head.appendChild(tag);
+  }
+
+  // ─── Set language and reload translations ───────────────────────────────
+  async function setLang(code) {
+    if (!SUPPORTED.includes(code)) code = 'en';
+    try { localStorage.setItem('bidready_lang', code); } catch (_) {}
+
+    document.documentElement.setAttribute('lang', code);
+
+    if (code === 'en') {
+      // Restore from data-i18n-en cache populated on first run
+      document.querySelectorAll('[data-i18n-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-i18n-en');
+      });
+      document.querySelectorAll('[data-i18n-placeholder-en]').forEach(el => {
+        el.setAttribute('placeholder', el.getAttribute('data-i18n-placeholder-en'));
+      });
+      renderSwitcher('en');
+      return;
+    }
+
+    try {
+      const tree = await loadTree(code);
+      applyTranslations(tree);
+      renderSwitcher(code);
+      try { if (typeof gtag === 'function') gtag('event', 'language_switch', { lang: code }); } catch (_) {}
+    } catch (e) {
+      console.warn('[i18n] failed to load', code, e);
+    }
+  }
+
+  // ─── Cache English (so EN switch can restore originals) ─────────────────
+  function cacheEnglish() {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      if (!el.hasAttribute('data-i18n-en')) {
+        el.setAttribute('data-i18n-en', el.textContent);
+      }
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      if (!el.hasAttribute('data-i18n-placeholder-en')) {
+        el.setAttribute('data-i18n-placeholder-en', el.getAttribute('placeholder') || '');
+      }
+    });
+  }
+
+  // ─── Load translation tree ──────────────────────────────────────────────
+  const trees = {};
+  async function loadTree(code) {
+    if (trees[code]) return trees[code];
+    const r = await fetch('/i18n-' + code + '.json', { cache: 'force-cache' });
+    if (!r.ok) throw new Error('fetch ' + code + ' failed: ' + r.status);
+    const tree = await r.json();
+    trees[code] = tree;
+    return tree;
+  }
+
+  // ─── Boot ───────────────────────────────────────────────────────────────
+  function boot() {
+    injectStyles();
+    cacheEnglish();
+    const lang = detectLang();
+    setLang(lang);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+
+  // Expose for debugging
+  window.bidreadyI18n = { setLang, detectLang, supported: SUPPORTED };
+})();
+
+</script>
 </body>
 </html>
